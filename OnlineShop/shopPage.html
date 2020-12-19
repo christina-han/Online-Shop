@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <title>shopPage</title>
+    <style>
+        .wrapper{
+            /* max-width: 1200px; */
+            margin: 0 auto;
+        }
+        
+        .productBanner{
+            width: 100%;
+            height: 450px;
+        }
+        .sectionProduct{
+            margin: 0 30px;
+            width: 70%;
+        }
+        @media screen and (max-width: 768px) {
+            .sectionProduct{
+            margin: 0;
+            width: 100%;
+        }
+        }
+        @media screen and (max-width: 576px) {
+            .productBanner{
+                width: 376px;
+                height: 211px;
+            }
+            .sectionProduct{
+            margin: unset;
+            width: 100%;
+        }
+        }
+    /* top block         */
+        .title{
+            margin: 50px 0 10px 0;
+            text-align: center;
+            width: 730px;
+        }
+        .topBlock{
+            background-color: #E7E2DB;
+            width: 730px;
+            height: 200px;
+            display: flex;
+            margin-bottom: 20px;
+            
+        }
+        .topTitle{
+            max-width: 300px;
+            height: 75px;
+            font-size: 25px;
+            color: #111111;
+            margin: auto auto;
+        }
+        .topPic{
+            margin: auto;
+        }
+        .productPic{
+            width: 120px;
+            height: 180px;
+            color: grey;
+            margin: auto auto;
+        }
+        @media screen and (max-width: 768px) {
+ 
+            .title{
+                width: 100%;
+            } 
+            .topBlock{
+                width: 100%;
+                height: 200px;
+            }
+
+   
+        }
+        
+        @media screen and (max-width: 576px) {
+            .title{
+                width: 100%;
+                margin-top: 10px;
+            }
+             .topBlock{
+                width: 100%;
+                height: 150px;
+            }
+            .topTitle{
+                width: 50%;
+                height: 75px;
+            }
+           
+            .productPic{
+                width: 80px;
+                height: 120px;
+            }
+   
+        }
+    /* product list */
+        .productList{
+            display: flex;
+            width: 730px;
+            text-align: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            
+        }
+        .Product{
+            flex-wrap: unset;
+        }
+        .product{
+            margin: 10px 10px 5px 10px ;
+        }
+        .picture{
+            position: relative;
+        }
+        .listPic{
+            width: 207px;
+            height: 300px;
+            
+        }
+        .heart{
+            color: #111111;
+            background-color: #ffffff;
+            padding: 8px;
+            position: absolute;
+            right: 0;
+            bottom: 0;            
+        }
+       
+        .mainName{
+            width: 207px;
+            height: 14px;
+            margin-top: 10px;
+        }
+        .secondName{
+            width: 207px;
+            height: 9px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            
+        }
+        .detail{
+            width: 207px;
+            height: 8px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+        }
+        .price{
+            width: 207px;
+            height: 10px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: clip;
+            margin: 10px 0 0 0 ;
+        }
+        @media screen and (max-width: 768px) {
+            .productList{
+                width: 768px;
+                padding: 0;
+            }
+
+   
+}
+        @media screen and (max-width: 576px) {
+            .productList{
+                width: 376px;
+            }
+            .listPic{
+                width: 154px;
+                height: 206px;
+            }
+            .heart{
+                bottom: -26px;
+                right: 0;
+                background-color: unset;
+                
+            }
+            .mainName{
+                width: 157px;
+                height: 11px;
+                margin-top: 10px;
+            }
+            .secondName{
+                width: 157px;
+                height: 7px;
+            }
+            .detail{
+                width: 157px;
+                height: 6px;
+            }
+            .price{
+                width: 157px;
+                height: 8px;
+            }
+   
+}
+    </style>
+</head>
+<body>
+    <div class="wrapper">   
+        <img class="productBanner" src="image/top.png" alt="">
+<!-- product -->
+        <div class="sectionProduct">
+    <!-- top block -->
+            <div class="eH2 title">Man's Pick up</div>
+            <div class="topBlock">
+                <div class="topTitle">COMBINATION MANHATTAN</div>
+                    <div class="topPic">
+                    <img class="productPic" src="image/man.png" alt="">
+                    <img class="productPic" src="image/man.png" alt=""></div>
+            </div>
+    <!-- product list                     -->
+            <div class="productList">
+                
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+                
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+
+                <div class="product">
+                    <div class="picture"><a href="">
+                        <img class="listPic" src="image/man.png" alt=""></a>
+                        <i class="far fa-heart heart"></i></div>
+                            <div class="Pmain mainName">風衣夾克</div>
+                            <p class="Psecond secondName">長版夾克外套防風防潑水棉質斜紋布料，連衣帽有仿
+                                綿羊布料內裡和抽繩。</p>
+                            <p class="Pdetail detail">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的
+                                穿著感。</p>
+                            <p class="Pprice price">NT$780</p>
+                </div>
+            </div> 
+
+          
+        </div>
+    </div>
+
+    
+</body>
+</html>
