@@ -1,3 +1,11 @@
+const docNames = [
+  'manCart1',
+  'manCart1-1',
+  'manCart1-2',
+  'manCart1-4',
+  'shopPage',
+];
+
 window.addEventListener('DOMContentLoaded', initFun);
 
 function initFun() {
@@ -11,11 +19,17 @@ function initFun() {
     },
   });
 
+  setTimeout(
+    console.log.bind(
+      console,
+      'please use loadDoc( /** Array<string> */ documentName[idx])'
+    )
+  );
 }
 
 
-function loadDoc(fileName, parentId) {
-  let pathname = `partial/${fileName}`;
+function loadDoc(fileName, parentId = 'root-slot') {
+  let pathname = `./partial/${fileName}.html`;
   let xhttp = new XMLHttpRequest();
   let method = 'GET';
 
@@ -27,5 +41,3 @@ function loadDoc(fileName, parentId) {
   xhttp.open(method, pathname, true);
   xhttp.send();
 }
-
-loadDoc('manCart1-1.html', 'root-slot');

@@ -3,7 +3,14 @@
   --white: #f8f9fa;
 }
 
-/* hide scrollbar */
+/* Hide scrollbar
+   ========================================================================== */
+
+/**
+ * 1. make scrollbar transparent.
+ *
+ */
+
 html {
     overflow: -moz-hidden-unscrollable;
     height: 100%;
@@ -23,7 +30,7 @@ body {
 ::-webkit-scrollbar {
   width: 0;
   height: 0;
-  background: transparent; /* make scrollbar transparent */
+  background: transparent; /* 1 */
 }
 
 html, body {
