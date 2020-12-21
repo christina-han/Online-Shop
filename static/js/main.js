@@ -22,11 +22,10 @@ function initFun() {
   setTimeout(
     console.log.bind(
       console,
-      'please use loadDoc( /** Array<string> */ documentName[idx])'
+      'please use loadDoc( /** Array<string> */ docNames[idx])'
     )
   );
 }
-
 
 function loadDoc(fileName, parentId = 'root-slot') {
   let pathname = `./partial/${fileName}.html`;
@@ -41,3 +40,5 @@ function loadDoc(fileName, parentId = 'root-slot') {
   xhttp.open(method, pathname, true);
   xhttp.send();
 }
+
+// loadDoc(docNames[0]);

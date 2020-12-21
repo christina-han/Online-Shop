@@ -3,6 +3,12 @@
   --white: #f8f9fa;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Hide scrollbar
    ========================================================================== */
 
@@ -12,19 +18,12 @@
  */
 
 html {
-    overflow: -moz-hidden-unscrollable;
-    height: 100%;
+  overflow: -moz-hidden-unscrollable;
+  height: 100%;
 }
 
 body::-webkit-scrollbar {
     display: none;
-}
-
-body {
-  -ms-overflow-style: none;
-  height: 100%;
-  width: calc(100vw + 18px);
-  overflow: auto;
 }
 
 ::-webkit-scrollbar {
@@ -34,13 +33,7 @@ body {
 }
 
 html, body {
-  position: relative;
-  margin: 0;
-  padding: 0;
   font-family: "Microsoft JhengHei", sans-serif;
-  overflow: hidden;
-  height: 100%;
-  width: 100%;
 }
 
 img {
@@ -48,6 +41,7 @@ img {
 }
 
 button, .clickable {
+  display: block;
   all: unset;
   cursor: pointer;
 }
@@ -61,6 +55,15 @@ button:focus, label:focus {
 }
 
 /* global utility */
+.cf::before,
+.cf::after {
+  content: " "; /* 1 */
+  display: table; /* 2 */
+}
+
+.cf::after {
+  clear: both;
+}
 .cursor-pointer {
   cursor: pointer;
 }
@@ -109,7 +112,6 @@ button:focus, label:focus {
 /* swiper css */
 .swiper-container {
   max-width: 160px;
-  /*height: 40px;*/
   margin: 0 2rem;
 }
 
@@ -140,7 +142,7 @@ button:focus, label:focus {
 
 /* custom layout  */
 .navbar {
-  position: absolute;
+  position: fixed;
   right: 0;
   left: 0;
   top: 0;
@@ -173,11 +175,7 @@ button:focus, label:focus {
 
 /* main content */
 .container {
-  position: absolute;
-  top: 86px;
-  padding: 0 4rem;
-  overflow-x: hidden;
-  height: calc(100% - 86px);
+  padding-top: 86px;
 }
 
 .product-news {
@@ -227,15 +225,11 @@ button:focus, label:focus {
 #toggle_menu:checked + .menu-panel {
   transform: translateX(0);
 }
-.menu-panel {
-  transform: translateX(313px);
-  transition: transform .3s ease-in;
-}
 .menu-trigger {
   position: absolute;
   top: 50%;
   left: -2.125rem;
-  transform: rotate(90deg) translate(0, 50%);
+  transform: translateY(-50%);
   transition: right .3s;
   background: var(--white);
   padding: .875rem;
@@ -244,11 +238,14 @@ button:focus, label:focus {
   position: fixed;
   top: 86px;
   right: 0;
-  width: 16.5rem;
+  width: 100%;
   max-width: 300px;
-  padding: 1.5rem;
+  max-height: calc(100% - 86px);
+  padding: 1rem 1.25rem;
   background-color: var(--white);
   border-left: 1px solid var(--primary-color);
+  transform: translateX(300px);
+  transition: transform .3s ease-in;
 }
 
 .search-panel {
@@ -258,7 +255,7 @@ button:focus, label:focus {
   display: flex;
 }
 
-.search-panel input {
+.search-panel > input {
   outline: 0;
   border: 0;
   background: 0;
@@ -267,17 +264,14 @@ button:focus, label:focus {
 }
 
 .product-category-panel {
-  margin: 1rem auto;
   overflow: scroll;
-  height: calc(100vh - 12rem);
+  height: calc(100vh - 36px);
   margin-left: 25%;
+  margin-bottom: 0;
 }
 
 /* footer */
 .footer-panel {
-  position: absolute;
-  left: 0;
-  right: 0;
   padding: 2rem;
   background-color: var(--primary-color);
   text-align: center;
