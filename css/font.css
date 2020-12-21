@@ -136,3 +136,23 @@
             }     
          }
          
+/* intro1 */
+         .iH1{
+             font-size: 53px;
+             color: hsla(0, 0%, 100%, 0.575);
+         }
+         .iH2{
+             font-size: 15px;
+             color: hsla(0, 0%, 100%, 0.575);
+         }
+         .iH3{
+             font-size: 13px;
+             color: #ffffff;
+         }
+         .iH4{
+             font-size: 53px;
+             color: #274455;
+         }
+         .iH5{
+             font-size: 14px;
+         }
