@@ -1,14 +1,7 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <title>manCart1-4</title>
+    <link rel="stylesheet" href="./static/css/font.css">
     <style>
         .wrapper {
             display: flex;
@@ -123,56 +116,95 @@
         .stock {
             margin-right: 30px;
         }
-        .rate{
+        .discription{
             color: #274455;
         }
 
- /* --------discription------ */
-        .leave-comment{
-            width: 650px;
-            height: 194px;
+        /* --------discription------ */
+        .descrip-wrap{
+            margin: 0 auto;
+            max-width: 90%;
+            background: lightgrey;
+        }
+        .description{
+            background: white;
+            border: 1px solid grey;
+           
             margin:  0 auto;
-            background:#274455 ;
-            padding: 10px 30px;
+            padding: 20px;
+           
             position: relative;
         }
-        .comment-title{
-            color: white;
+
+        .product-descrip-2{
+            justify-content: space-between;
+            min-width: 100%;
+            max-width: 692px;
+            margin-top: 20px;
         }
-        .star{
-            color: white;
-            margin: 5px 0 15px 0;
-        }
-        .leave-comment input{
-            width: 585px;
-            height: 69px;
-        }
-        .submit{
+        .comment-button button{
+            padding: 5px 60px;
+            border-radius: 0%;
+            background: #274455;
             border: none;
-            background: #D09028;
-            padding: 3px 12px;
-            position: absolute;
-            right: 5%;
-            bottom: 7%;
             color: white;
+        }
+        .append-comment{
+            justify-content: flex-end;
+            display: flex;
+            position: absolute;
+            right: 0%;
+            bottom: 0%;
+        }
+        .append-comment button{
+            border: none;
+            background: none;
+        }
+        .append-comment img{
+            width: 10px;
+            height: 10px;
+            
+        margin-top: 30px;
+
+        }
+        .description-2{
+            background: white;
+            
+            
+            padding: 20px;
+            
+            border: 1px solid white;
+            margin: 20px 0 ;
+        
+        }
+        .guest-name{
+            margin-bottom: 10px;
+        }
+        .space-between{
+            justify-content: space-between;
+        }
+        .fa-check{
+            margin: 0 10px;
+        }
+        .page{
+            display: flex;
+            justify-content: center;    
+        }
+        .page a{
+            margin: 0 5px;
         }
         @media screen and (max-width: 768px) {
             .aboutProduct{
-                margin-top: 450px;
+                margin-top: 600px;
             } 
             .line{
               width: 375px;
           }
-          .leave-comment{
-              width: 340px;
-              height: 134px;
-              padding: 10px 7px;
-          }
-          .leave-comment input{
-              width: 316px;
-              height: 40px;
-              font-size: 5px;
-          }
+          .disSection {
+            width: 375px;
+
+        }
+       
 
 
    
@@ -383,6 +415,22 @@
             color:#DDBB5E;
             padding-right: 7px;
         }
+        .return{
+            margin: 20px 0 0 20px;
+        }
+        .material{
+            width: 155px;
+            height: auto;
+            margin: 0 0 40px 20px;
+        }
+        .deliver{
+            width: 300px;
+            height: auto;
+            margin: 0 0 0 20px;
+        }
+        .w1{
+            margin-top: 15px;
+        }
         @media screen and (max-width: 768px) {
             .right{
                 width: 100%;
@@ -397,7 +445,7 @@
             }
             .priceTitle{
                 position: absolute;
-                top: 9%;
+                top: 6%;
                 left: 58%;
             }
             
@@ -435,6 +483,9 @@
     @media screen and (max-width: 576px) {
             .right{
                 top: 60%;
+            }
+            .comment-button button{
+                padding: 5px 11px;
             }
 
    
@@ -518,18 +569,18 @@
         <!-- picture section -->
         <div class="left">
             <div class="pictureSection">
-                <img class="mainPic cover-fit" src="image/cart.png" alt="">
+                <img class="mainPic cover-fit" src="./static/images/cart.png" alt="">
                 <!-- picture group        -->
                 <div class="pictureGroup">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                    <img class="groupPic" src="image/cart.png" alt="">
-                <img class="down" src="image/down.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                    <img class="groupPic" src="./static/images/cart.png" alt="">
+                <img class="down" src="./static/images/down.png" alt="">
                 </div>
                 
             </div>
@@ -540,16 +591,104 @@
                 <div class="rate">商品評分</div>
             </div>
             <div class="line"></div>
-<!-- discription------------------- -->
-           <div class="leave-comment">
-            <div class="comment-title f-16px">
-                我要評論
+<!-- mk_1: discription------------------- -->
+            <div class="descrip-wrap">
+                <div class="description">
+
+                    <div class="product-descrip flex ">
+                        <div class="comment mA4">商品評論</div>
+                        <div class="star"><i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                        <div class="recommend mA1">89%的購買者推薦此商品。</div>
+                    </div>
+                    <div class="product-descrip-2 flex">
+                        <div class="client-name mA1">客戶用名：<input type="text"></div>
+
+                        <div class="comment-button"> <button class="mA2">我要評論</button> </div>
+                    </div>
+                    <div class="append-comment"><button><img src="././static/images/down.png" alt=""></button></div>
+                </div>
+                <div class="description-2">
+                    <div class="guest">
+                        <div class="flex space-between">
+                            <div class="guest-name mA1">Fish <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="rate-score flex ">
+                                <div class="question mA1">對您有幫助嗎？</div>
+                                <i class="fa fa-check"></i>
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="comment-date mA1">2020/07/22 22:58</div>
+
+
+                    </div>
+                </div>
+                <div class="description-2">
+                    <div class="guest">
+                        <div class="flex space-between">
+                            <div class="guest-name mA1">Fish <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="rate-score flex ">
+                                <div class="question mA1">對您有幫助嗎？</div>
+                                <i class="fa fa-check"></i>
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="comment-date mA1">2020/07/22 22:58</div>
+                    </div>
+                </div>
+                <div class="description-2">
+                    <div class="guest">
+                        <div class="flex space-between">
+                            <div class="guest-name mA1">Fish <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="rate-score flex ">
+                                <div class="question mA1">對您有幫助嗎？</div>
+                                <i class="fa fa-check"></i>
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="comment-date mA1">2020/07/22 22:58</div>
+                    </div>
+                </div>
+                <div class="description-2">
+                    <div class="guest">
+                        <div class="flex space-between">
+                            <div class="guest-name mA1">Fish <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="rate-score flex ">
+                                <div class="question mA1">對您有幫助嗎？</div>
+                                <i class="fa fa-check"></i>
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="comment-date mA1">2020/07/22 22:58</div>
+                    </div>
+                </div>
+                <div class="description-2">
+                    <div class="guest">
+                        <div class="flex space-between">
+                            <div class="guest-name mA1">Fish <i class="fa fa-star"></i><i class="fa fa-star"></i><i
+                                    class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i></div>
+                            <div class="rate-score flex ">
+                                <div class="question mA1">對您有幫助嗎？</div>
+                                <i class="fa fa-check"></i>
+                                <i class="fa fa-times"></i>
+                            </div>
+                        </div>
+                        <div class="comment-date mA1">2020/07/22 22:58</div>
+                    </div>
+                </div>
+                <div class="page">
+                    <a href=""><img src="./static/images/Path 1.svg" alt=""></a>
+                    <a href=""><img src="./static/images/1.png" alt=""></a>
+                    <a href=""><img src="./static/images/2.png" alt=""></a>
+                    <a href=""><img src="./static/images/3.png" alt=""></a>
+                    <a href=""><img src="./static/images/Path 2.svg" alt=""></a>
+                </div>
             </div>
-            <div class="star f-7px">星級：<i class="fas fa-star"></i><i class="fas fa-star"></i><i
-                    class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i></div>
-            <input class="f-10px" type="text">
-            <button class="submit f-6px">確定送出</button>
-        </div>
+
             <!-- slide section -->
             <div class="slideSection">
                 <div class="mob-line"></div>
@@ -558,80 +697,80 @@
                     <div class="like mH4">猜你喜歡</div>
                     <div class="slideProduct">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct none">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct none">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
-                    <img class="arrow" src="image/arrow.png" alt="">
+                    <img class="arrow" src="./static/images/arrow.png" alt="">
                 </div>
 
                 <div class="slideLike mH4">
                     <div class="like">猜你喜歡</div>
                     <div class="slideProduct">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct none">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
                     <div class="slideProduct none">
                         <a class="likeLink" href="">
-                            <div class="slideImg"><img class="cover-fit" src="image/small.png" alt=""></div>
+                            <div class="slideImg"><img class="cover-fit" src="./static/images/small.png" alt=""></div>
                             <div class="name mH5">個性長版外套</div>
                             <div class="priceTag Pdetail">NT$ 780</div>
                         </a>
                     </div>
-                    <img class="arrow" src="image/arrow.png" alt="">
+                    <img class="arrow" src="./static/images/arrow.png" alt="">
                 </div>
             </div>
 
@@ -640,7 +779,7 @@
         <div class="right">
             <!-- color section -->
             <div class="productName mH1">率性俐落大學T</div>
-            <div class="rateStar margin20"><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>89%的購買者推薦此商品。</div>
+            <div class="rateStar margin20"><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i><i class="fa fa-star"></i>89%的購買者推薦此商品。</div>
             <div class="priceTitle mH3 margin20">NT $50000</div>
             <div class="selectColor mH2 margin20">SELECT COLOR:</div>
             <div class="color-wrapper margin20">
@@ -650,10 +789,10 @@
                 <div class="PicColor red"></div>
                 <div class="PicColor yellow"></div>
                 <div class="PicColor green"></div>
-                <i class="far fa-heart heart"></i>
+                <i class="fa fa-heart heart"></i>
             </div>
             <div class="PicColor-Wrap flex">
-                <img class="pic-color-arrow" src="image/arrow.png" alt="">
+                <img class="pic-color-arrow" src="./static/images/arrow.png" alt="">
                 <div class="PicColor lightBlue"></div>
                 <div class="PicColor blue"></div>
                 <div class="PicColor purple"></div>
@@ -676,8 +815,17 @@
             <div class="cart margin20">
                 加入購物車
             </div>
-            <div class="return mH2 margin20">成份和保養</div>
+            <div class="return mH2">成份和保養</div>
+                <div class="material">
+                    <div class="w1">材質100%尼龍</div>
+                    <div class="w1">填充物100%尼龍</div>
+                    <div class="w1">主要面料100%尼龍</div>
+                </div>  
             <div class="return mH2 margin20">配送、換貨和退貨</div>
+                <div class="deliver">
+                    <div class="w1">購買隔日送達 - NT$ 80 / (超過 1200 新台幣 的訂單免費運達)</div>
+                    <div class="w1">週一至週五下午5點之前完成的所有訂單於次日送達。</div>
+                </div>
             
         </div>
 
