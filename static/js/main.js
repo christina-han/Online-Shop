@@ -4,6 +4,8 @@ const docNames = [
   'manCart1-2',
   'manCart1-4',
   'shopPage',
+  'member',
+  'intro',
 ];
 
 window.addEventListener('DOMContentLoaded', initFun);

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font.css">
+    <link rel="stylesheet" href="./static/css/vendors/normalize.min.css">
+    <link rel="stylesheet" href="./static/css/font.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
         integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
     <title>member</title>
@@ -94,7 +94,7 @@
         }
         .join-button{
             background: white;
-            max-width: 200px;
+            max-width: 400px;
             margin:  0 auto 50px auto;
             padding: 7px 100px;
             border: 1px solid grey;
@@ -148,21 +148,21 @@
                 <div class="account">Password</div>
             </div>
 
-            <div class="forget"><a  href="">忘記密碼</a></div>
+            <div class="forget"><a href="">忘記密碼</a></div>
 
             <div class="link-enter">
                 <a class="link-button facebook" href="">Facebook登入</a>
                 <a class="link-button" href="">Email登入</a>
                 
             </div>
-            <div class="enter-button"><a  href="">登入</a></div>
+            <div class="enter-button"><a onclick="loadDoc(docNames[3])" href="javascript:;">登入</a></div>
         </div>
         <div class="join-wrapper">
             <div class="join">加入會員</div>
             <div class="reminder-wrapper">
                 <div class="reminder">若您還未註冊kelineshop會員</div>
                 <div class="reminder">歡迎加入我們以便輕鬆購物</div>
-                <div class="join-button"><a  href="">點我加入</a></div> 
+                <div class="join-button"><a href="">點我加入</a></div> 
             </div>
         </div>
     </div>

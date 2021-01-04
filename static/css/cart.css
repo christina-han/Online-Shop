@@ -41,6 +41,11 @@
   display: flex !important;  /* Klein:  need remove */
   justify-content: center;
 }
+/* .prod-qty{
+  display: inline-block;
+  justify-content: center;
+  margin: 1rem auto;
+} */
 .thead {
   border: 1px solid grey;
 }
@@ -60,6 +65,10 @@ td {
 }
 
 /*  */
+.qty-wrap{
+  margin: 1rem auto;
+  width: 68%;
+}
 .descrip-wrap{
     margin: 1rem auto;
     max-width: 90%;
@@ -68,10 +77,8 @@ td {
 .description{
     background: white;
     border: 1px solid grey;
-   
     margin:  0 auto;
-    padding: 20px;
-   
+    padding: 20px;  
     position: relative;
 }
 
@@ -147,14 +154,20 @@ margin-top: 30px;
 }
 
 .pic-pannel {
-  width: 60%;
+  width: 60%;                                    
   padding: 0 1rem;
+  margin-top: 30px;
 }
-
+.bread-crumbs a{
+  text-decoration: none;
+  color: #000000;
+}
 /* picture section */
+
 .picture-section {
   display: flex;
   justify-content: center;
+  margin-top: 20px;
 }
 
 .picture-demo {
@@ -179,7 +192,7 @@ margin-top: 30px;
   min-width: 100px;
   margin-top: -.25rem;  /* Klein: stick on the top of demo field (hacky) */
   height: 100%;
-  border: 1px solid lightblue;
+  /* border: 1px solid lightblue; */
 }
 
 .group-pic {
@@ -461,7 +474,7 @@ margin: 20px auto 20px auto;
 }
 
 .product-name{ /* Klein: remove this class */
-  margin: 50px 20px 20px 20px;
+  margin: 70px 20px 20px 20px;
 }
 
 /* .rateStar{ font-size: 8px; } */

@@ -3,10 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/normalize.css">
-    <link rel="stylesheet" href="css/font.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css"
-        integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./static/css/vendors/normalize.min.css">
+    <link rel="stylesheet" href="./static/css/vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./static/css/vendors/swiper/swiper.min.css">
+    <script src="./static/js/vendors/swiper/swiper.min.js"></script>
+    <link rel="stylesheet" href="./static/css/font.css">
     <title>intro1</title>
     <style>
         .cover-fit {
@@ -47,8 +48,13 @@
         .v-button{
             text-decoration: none;
             border: 1px solid #ffffff;
-            padding: 0 40px 0 40px;
+            padding: 5px 40px 5px 40px;
 
+        }
+        .v-button:hover{
+            border: 1px solid #000000;
+            background-color: #000000;
+            color: #ffffff;
         }
 
         @media screen and (max-width: 576px) {
@@ -90,6 +96,7 @@
             margin: 0 auto;
             padding: 5px 0 5px 0;
             color: #B4ABA4;
+            border: 2px solid #274455;
         }
         .more:hover{
             color: #274455;
@@ -133,64 +140,64 @@
     <div class="wrapper">
 <!-- image block -->
         <div class="cover-block">
-            <img class="bg-image cover-fit" src="image/intro1.png" alt="">
+            <img class="bg-image cover-fit" src="./static/images/intro1.png" alt="">
             <div class="cover-hover">
                 <div class="cover-title iH1">Man's in</div>
                 <div class="cover-detail iH2">Almost before we knew it, we had left the ground.</div>
-                <a class="v-button iH3" href="">View</a>
+                <a class="v-button iH3" onclick="loadDoc(docNames[4]);" href="#">View</a>
             </div>
         </div>
 <!-- best sell -->
         <div class="bs-image">
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
             <div class="bs-title iH4">Best sellers</div>
-            <a class="more-button iH5" href=""><div class="more">查看更多</div></a>
+            <a class="more-button iH5" onclick="loadDoc(docNames[4]);" href="javascript:;"><div class="more">查看更多</div></a>
 
         </div>
 <!-- image block -->
         <div class="cover-block">
-            <img class="bg-image cover-fit" src="image/intro1.png" alt="">
+            <img class="bg-image cover-fit" src="./static/images/intro1.png" alt="">
             <div class="cover-hover">
                 <div class="cover-title iH1">Man's in</div>
                 <div class="cover-detail iH2">Almost before we knew it, we had left the ground.</div>
-                <a class="v-button iH3" href="">View</a>
+                <a class="v-button iH3" onclick="loadDoc(docNames[4]);" href="javascript:;">View</a>
             </div>
         </div>
 <!-- best sell -->
         <div class="bs-image">
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
             <div class="bs-title iH4">Best sellers</div>
-            <a class="more-button iH5" href=""><div class="more">查看更多</div></a>
+            <a class="more-button iH5" onclick="loadDoc(docNames[4]);" href="javascript:;"><div class="more">查看更多</div></a>
 
         </div>
 <!-- image block -->
         <div class="cover-block">
-            <img class="bg-image cover-fit" src="image/intro1.png" alt="">
+            <img class="bg-image cover-fit" src="./static/images/intro1.png" alt="">
             <div class="cover-hover">
                 <div class="cover-title iH1">Man's in</div>
                 <div class="cover-detail iH2">Almost before we knew it, we had left the ground.</div>
-                <a class="v-button iH3" href="">View</a>
+                <a class="v-button iH3" onclick="loadDoc(docNames[4]);" href="javascript:;">View</a>
             </div>
         </div>
 <!-- best sell -->
         <div class="bs-image">
-            <img class="more-arrow none" src="image/more-left.png" alt="">
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <a href=""><img class="demo-img" src="image/man.png" alt=""></a>
-            <img class="more-arrow none" src="image/more-right.png" alt="">
+            <img class="more-arrow none" src="./static/images/more-left.png" alt="">
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img" src="./static/images/man.png" alt=""></a>
+            <img class="more-arrow none" src="./static/images/more-right.png" alt="">
             <div class="bs-title iH4">Best sellers</div>
-            <a class="more-button iH5" href=""><div class="more">查看更多</div></a>
+            <a class="more-button iH5" onclick="loadDoc(docNames[4]);" href="javascript:;"><div class="more">查看更多</div></a>
 
         </div>
 
