@@ -109,6 +109,11 @@ button:focus, label:focus {
 .w-full {
   width: 100%;
 }
+@media screen and (max-width: 576px) {
+  .w-full {
+    width: 376px;
+  }
+}
 /* swiper css */
 .swiper-container {
   max-width: 160px;
