@@ -11,8 +11,9 @@ for (let i = 0; i < collapse.length; i++) {
         } else {
             setTimeout(function(){
                 content.style.display = 'none';
-            }, 300);
+            }, 200);
         }
         content.classList.toggle('collapse-hide')
     });
+  collapse[i].click();
 }
