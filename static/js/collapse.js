@@ -1,8 +1,12 @@
 let collapse = document.getElementsByClassName('test-collapse');
 
 for (let i = 0; i < collapse.length; i++) {
+
     collapse[i].addEventListener('click', function(evt){
         evt.stopPropagation();
+
+    collapse[i].addEventListener('click', function(){
+
         let content = this.firstElementChild;
         let toShow = content.classList.contains('collapse-hide') ? true : false;
         if (toShow) {
@@ -12,8 +16,15 @@ for (let i = 0; i < collapse.length; i++) {
         } else {
             setTimeout(function(){
                 content.style.display = 'none';
+
             }, 300);
         }
         content.classList.toggle('collapse-hide');
     });
+
+            }, 200);
+        }
+        content.classList.toggle('collapse-hide')
+    });
+  collapse[i].click();
 }
