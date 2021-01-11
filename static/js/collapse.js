@@ -1,7 +1,8 @@
 let collapse = document.getElementsByClassName('test-collapse');
 
 for (let i = 0; i < collapse.length; i++) {
-    collapse[i].addEventListener('click', function(){
+    collapse[i].addEventListener('click', function(evt){
+        evt.stopPropagation();
         let content = this.firstElementChild;
         let toShow = content.classList.contains('collapse-hide') ? true : false;
         if (toShow) {
@@ -13,6 +14,6 @@ for (let i = 0; i < collapse.length; i++) {
                 content.style.display = 'none';
             }, 300);
         }
-        content.classList.toggle('collapse-hide')
+        content.classList.toggle('collapse-hide');
     });
 }
