@@ -191,6 +191,10 @@ button:focus, label:focus {
   height: 100%;
   align-items: center;
 }
+.a-header{
+  color: #fff;
+  text-decoration: none;
+}
 
 /* main content */
 .container {
@@ -287,6 +291,11 @@ button:focus, label:focus {
   height: calc(100vh - 36px);
   margin-left: 25%;
   margin-bottom: 0;
+}
+.a-unset{
+  color: var(--primary-color);
+  text-decoration: none;
+
 }
 
 /* footer */
