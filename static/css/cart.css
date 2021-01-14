@@ -182,7 +182,8 @@ margin-top: 30px;
   padding: .25rem;
 }
 .main-pic {
-  width: 100%;
+  width: 28vw;
+  height: 28vw;
 }
 
 /* picture group */
@@ -196,7 +197,8 @@ margin-top: 30px;
 }
 
 .group-pic {
-  width: 100%;
+  width: 5vw;
+  height: 5vw;
   /* height: 144px; */
 }
 .icon-arrow-down {
@@ -298,7 +300,12 @@ margin-top: 30px;
 .discription {
   /* margin-right: 30px; */
 }
-
+.discription :hover {
+  cursor: pointer;
+}
+.rate :hover{
+  cursor: pointer;
+}
 .stock {
   /* margin-right: 30px; */
 }
@@ -430,18 +437,22 @@ margin: 20px auto 20px auto;
 .slide-panel {
   margin: 1rem 0;
 }
-
 .slide-like {
   display: flex;
   /* padding: 0 50px; */
-  justify-content: space-around;
   align-items: center;
   margin: 1rem 0 3rem;
 }
 
+.like-section{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0 25px;
+  width: 86%;
+}
+
 .like {
-  /* margin-top: 43px; */
-  /* Klein:  remove it; */
+  position: relative;
 }
 
 .likeLink {
@@ -451,12 +462,13 @@ margin: 20px auto 20px auto;
 
 .slideProduct {
   text-align: center;
+  margin: 0 1.5%;
 }
 
 .slideImg {
   position: relative;
-  width: 100px;
-  height: 100px;
+  width: 8vw;
+  height: 8vw;
 }
 
 .product-price {
@@ -466,6 +478,8 @@ margin: 20px auto 20px auto;
 
 .arrow {
   width: 16px;
+  position: absolute;
+  left: 56%
 }
 @media screen and (max-width: 768px) {
   .mob-line{
@@ -528,12 +542,16 @@ margin: 20px auto 20px auto;
   height: 25px;
   border-radius: 50%;
   margin: 0 10px 10px 0;
+  border: 1.5px solid transparent;
 
+}
+.PicColor:focus{
+ border: 1.5px solid #1f1f1f
 }
 
 .white {
   background-color: white;
-  border: 1px solid black;
+  border: 0.2px solid black;
 
 }
 
@@ -581,6 +599,12 @@ margin: 20px auto 20px auto;
 .margin20{
   margin: 1rem 0;
 }
+.stuck{
+  padding: 2px 20px 2px 15px;
+}
+.select-size{
+  display: flex;
+}
 .select-size select  {
   width: 128px;
 }
@@ -601,6 +625,9 @@ margin: 20px auto 20px auto;
   position: absolute;
   bottom: 82%;
   left: 70%;
+}
+.pic-color-arrow:hover{
+  cursor: pointer;
 }
 .fa-star{
   color:#DDBB5E;

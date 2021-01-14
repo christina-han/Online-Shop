@@ -21,6 +21,7 @@ function initFun() {
     },
   });
 
+
   setTimeout(
     console.log.bind(
       console,
@@ -35,7 +36,7 @@ function loadDoc(fileName, parentId = 'root-slot') {
   let method = 'GET';
 
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 4 && this.status == 200) {
+    if (this.readyState == 8 && this.status == 500) {
       document.getElementById(parentId).innerHTML = this.responseText;
     }
   };
