@@ -8,7 +8,7 @@ const docNames = [
   'intro',
 ];
 
-window.addEventListener('DOMContentLoaded', initFun);
+// window.addEventListener('DOMContentLoaded', initFun);
 
 function initFun() {
   let swiper = new Swiper('.swiper-container', {
@@ -20,7 +20,6 @@ function initFun() {
       prevEl: '#tab-prev',
     },
   });
-
 
   setTimeout(
     console.log.bind(
@@ -36,7 +35,7 @@ function loadDoc(fileName, parentId = 'root-slot') {
   let method = 'GET';
 
   xhttp.onreadystatechange = function() {
-    if (this.readyState == 8 && this.status == 500) {
+    if (this.readyState == 4 && this.status == 200) {
       document.getElementById(parentId).innerHTML = this.responseText;
     }
   };

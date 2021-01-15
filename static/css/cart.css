@@ -224,8 +224,8 @@ margin-top: 30px;
     width: 100%;
   }
   .main-pic{
-    width: 768px;
-    height: 620px;
+    width: 100vw;
+    height: 100vw;
     margin: 0;
     position: relative;
   }
@@ -245,6 +245,7 @@ margin-top: 30px;
   .pic-pannel{
     width: 100%;
     padding: 0;
+    margin: 0;
 
   }
   .picture-demo{
@@ -257,8 +258,8 @@ margin-top: 30px;
 
   }
   .main-pic{
-    width: 375px;
-    height: 492px;
+    width: 100vw;
+    height: 100vw;
     margin: 0;
   }
   .picture-section{
@@ -349,7 +350,7 @@ margin: 20px auto 20px auto;
 }
 @media screen and (max-width: 768px) {
   .product-info-panel{
-    margin-top: 450px;
+    margin-top: 490px;
   } 
   .line{
     width: 375px;
@@ -399,10 +400,12 @@ margin: 20px auto 20px auto;
     width: 365px;
     margin: 0;
   }
+  
 
 }
 
 /* slide section */
+
 
 .slideSection {
   /* margin: 100px 0 20px 0; */
@@ -491,6 +494,9 @@ margin: 20px auto 20px auto;
 
 }
 @media screen and (max-width: 576px) {
+  .rwd-none{
+    display: none;
+  }
   .new-button{
     padding: 4px 20px 4px 20px;
   }
@@ -507,7 +513,7 @@ margin: 20px auto 20px auto;
   }
   .like{
     margin-top: 24px;
-    margin-right: 20px;
+    font-size: 8px;
   }
   .arrow{
     margin-top: 19px;
@@ -516,6 +522,19 @@ margin: 20px auto 20px auto;
     width: 378px;
     margin-bottom: 30px;
   }
+  .slide-like{
+    padding: 0 30px;
+  }
+  .like-section{
+    margin-top: 24px;
+    font-size: 8px;
+    width: 35%;
+
+  }
+  .arrow{
+    margin: 0;
+    left: 86%;
+  }
 
 
 }
@@ -523,31 +542,47 @@ margin: 20px auto 20px auto;
 /* color section */
 .right {
   /* padding-left:2%; */
-  padding: 0 1rem;
+  padding: 0 2rem;
   width: 40%;
   border-left: solid 1px #111111;
 }
 
 .product-name{ /* Klein: remove this class */
-  margin: 70px 20px 20px 20px;
+  margin: 70px 0 20px 0;
+}
+.price-section{
+  display: flex;
+  justify-content: space-between;
+}
+.heart{
+  width: 20px;
+  height: 17px;
+ 
 }
 
 /* .rateStar{ font-size: 8px; } */
 
 .PicColor-Wrap{
   position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.color-check{
+  border: 2px solid transparent;
+  padding: 5px;
+  border-radius: 4px;
+}
+.color-check:focus{
+ border: 1.9px solid rgb(51, 80, 211);
 }
 .PicColor {
   width: 25px;
   height: 25px;
   border-radius: 50%;
-  margin: 0 10px 10px 0;
-  border: 1.5px solid transparent;
+  /* margin: 0 10px 10px 0; */
 
 }
-.PicColor:focus{
- border: 1.5px solid #1f1f1f
-}
+
 
 .white {
   background-color: white;
@@ -604,9 +639,39 @@ margin: 20px auto 20px auto;
 }
 .select-size{
   display: flex;
+  margin: 3rem 0 1rem 0;
+  justify-content: space-between;
+  
 }
-.select-size select  {
-  width: 128px;
+.select-size:hover{
+  cursor: p;
+}
+.size{
+  width: 30%;
+  border-radius: unset;
+  border: 2px solid #274455;
+  text-align: center;
+}
+.select-quantity{
+  padding: 2px 2.5%;
+  width: 30%;
+  border-radius: unset;
+  border: 2px solid #274455;
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+}
+.size-icon{
+  width: 10px;
+  height: 2px;
+}
+.size-icon2{
+  width: 10px;
+  height: 10px;
+}
+
+.mr-20{
+  margin-right: 20px;
 }
 
 .cart{
@@ -615,11 +680,12 @@ margin: 20px auto 20px auto;
   color: white;
   text-align: center;
 }
-.heart{
-  margin-left: 65px;
-  margin-top: 5px;
+.cart:hover{
+  cursor: pointer;
 }
-.pic-color-arrow{
+
+
+/* .pic-color-arrow{
   width: 18px;
   height: 18px;
   position: absolute;
@@ -628,11 +694,23 @@ margin: 20px auto 20px auto;
 }
 .pic-color-arrow:hover{
   cursor: pointer;
-}
+} 箭頭取消 */  
 .fa-star{
   color:#DDBB5E;
   padding-right: 7px;
 }
+.word-section{
+  border: 2px solid #274455;
+  padding: 8px 5px;
+  border-radius: 4px;
+  margin: 2px;
+
+}
+.word-section:focus{
+  border: 1.9px solid rgb(51, 80, 211);
+ }
+
+
 
 @media screen and (max-width: 768px) {
   .right{
@@ -648,8 +726,14 @@ margin: 20px auto 20px auto;
   }
   .priceTitle{
     position: absolute;
-    top: -5%;
-    left: 66%;
+    top: -3%;
+    left: 54%;
+    display: flex;
+  }
+  .wh5{
+    width: 5px;
+    height: 5px;
+    font-size: 5pxs;
   }
 
   .PicColor{
@@ -666,12 +750,12 @@ margin: 20px auto 20px auto;
     margin: 0;
     position: absolute;
     top: 2px;
-    right: -154%;
+    right: 8%;
   }
   .pic-color-arrow{
     position: absolute;
     bottom: 13%;
-    left: 116%;
+    left: 108%;
 
   }
   .select-size select  {
@@ -685,7 +769,7 @@ margin: 20px auto 20px auto;
 
 @media screen and (max-width: 576px) {
   .right{
-    top: 82%;
+    top: 61%;
   }
 }
 
