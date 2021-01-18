@@ -158,6 +158,28 @@ button:focus, label:focus {
   background-color: transparent;
   border: 4px solid;
 }
+.height-adjust{
+  display: block;
+  margin-top: 6.5%;
+}
+@media screen and (min-width: 1420px) {
+  .height-adjust{
+    display: block;
+    margin-top: 2%;
+  }
+}
+@media screen and (min-width: 1705px) {
+  .height-adjust{
+    display: block;
+    margin-top: 5%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .height-adjust{
+    display: block;
+    margin-top: 3%;
+  }
+}
 
 /* custom layout  */
 .navbar {
