@@ -286,6 +286,7 @@ button:focus, label:focus {
   width: 100%;
   max-width: 300px;
   max-height: calc(100% - 86px);
+  min-height: 100vh;
   padding: 1rem 1.25rem;
   background-color: var(--white);
   border-left: 1px solid var(--primary-color);
