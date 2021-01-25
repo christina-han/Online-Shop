@@ -132,6 +132,7 @@ button:focus, label:focus {
 .swiper-container {
   max-width: 400px;
   margin: 0 2rem;
+  height: 38px;
 }
 
 .swiper-slide {
@@ -160,7 +161,7 @@ button:focus, label:focus {
 }
 .height-adjust{
   display: block;
-  margin-top: 6.5%;
+  margin-top: 2.5%;
 }
 @media screen and (min-width: 1416px) {
   .height-adjust{
