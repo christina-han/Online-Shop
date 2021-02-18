@@ -1,0 +1,163 @@
+.cover-fit{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+.wrapper{
+ 
+    margin: 0 auto;
+}
+.over-flow {
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.productBanner{
+    width: 100%;
+    height: 450px;
+}
+.sectionProduct{
+    margin: 0 auto;
+    padding: 0 11%;
+}
+
+
+/* top block         */
+.title{
+    margin: 20px 0 20px 0;
+    text-align: center;
+    color: #8C8079;
+    font-weight: 600;
+}
+.list-wrapper{
+    padding: 0 10%;
+}
+.topBlock{
+    background-color: #8C8079;
+    border: 1px solid #707070;
+    height: 300px;
+    display: flex;
+    padding: 0 70px;
+    justify-content: space-around;
+    margin: 0 auto 20px auto;
+    
+}
+.topTitle{
+    max-width: 344px;
+    line-height: 75px;
+    font-size: 25px;
+    color: #FFFFFF;
+    margin: auto 0;
+    text-align: center;
+    font-size: 50px;
+    font-weight: 500;
+}
+
+.productPic{
+    width: 250px;
+    height: 250px;
+    margin: auto 30px;
+}
+
+
+
+
+/* product list 4 version */
+.product-section{
+}
+
+.product-list{
+    text-align: center;
+    max-width: 246px;
+}
+.product-image{
+    width: 246px;
+    height: 246px;
+}
+.p-price{
+    margin-top: 22px;
+}
+
+@media screen and (max-width: 576px) {
+    .productBanner{
+        width: 376px;
+        height: 211px;
+    }
+    .sectionProduct{
+    margin: unset;
+    width: 100%;
+    }
+
+/* top block         */
+    .title{
+        width: 100%;
+        margin-top: 10px;
+    }
+    .topBlock{
+        width: 100%;
+        height: 150px;
+    }
+    .topTitle{
+        width: 50%;
+        height: 75px;
+    }
+
+    .productPic{
+        width: 16vw;
+        height: 16vw;
+    }
+/* product list */
+    .productList{
+        width: 376px;
+    }
+    .listPic{
+        width: 43vw;
+        height: 43vw;
+    }
+    .heart{
+        bottom: -26px;
+        right: 0;
+        background-color: unset;
+        
+    }
+    .mainName{
+        width: 157px;
+        height: 11px;
+        margin-top: 10px;
+    }
+    .secondName{
+        width: 157px;
+    }
+    .detail{
+        width: 157px;
+    }
+    .price{
+        width: 157px;
+    }
+}
+/* 平板 */
+@media screen and (max-width: 768px) {
+    .sectionProduct{
+        margin: 0;
+        width: 100%;
+    }
+
+    /* top block         */
+    .title{
+        width: 100%;
+    } 
+    .topBlock{
+        width: 100%;
+        height: 200px;
+    }
+    
+    
+    /* product list */
+    .productList{
+        width: 768px;
+        padding: 0;
+    }
+
+
+}

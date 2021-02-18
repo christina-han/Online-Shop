@@ -1,0 +1,168 @@
+.eH2{
+    font-size: 25px;
+    color: #B4ABA4;
+}
+.Pmain{
+    font-weight: bold;
+    font-size: 14pt;
+    color: #111111;
+}
+.Psecond{
+    font-size: 9pt;
+    color: #111111;
+}
+.Pdetail{
+    font-size: .75rem;
+    color: #111111;
+}
+.Pprice{
+    font-size: 10pt;
+    color: #111111;
+}
+.mA4{
+    font-size: 15px;
+}
+@media screen and (max-width: 576px) {
+    .eH2{
+        font-size: 25pt;
+    }
+    .Pmain{
+        font-weight: bold;
+        font-size: 11pt;
+        color: #111111;
+    }
+    .Psecond{
+        font-size: 7pt;
+        color: #111111;
+    }
+    .Pdetail{
+        font-size: 6pt;
+        color: #111111;
+    }
+    .Pprice{
+        font-size: 8pt;
+        color: #111111;
+    }
+}
+
+/* manCart */
+    .C14pt{
+        font-size: 12pt;
+    }
+    .mH1{
+        font-size: 36px;
+    }
+    .mH2{
+        font-size: 15px;
+    }
+    .mH3{
+        font-size: 25px;
+    }
+    .mH5{
+        font-size: .75rem;
+        color: #111111;
+    }
+@media screen and (max-width: 576px) {
+   .C14pt{
+       font-size: 8pt;
+   }
+   .mH1{
+       font-size: 25px;
+   }
+   .mH3{
+       font-size: 20px;
+   }
+   .mH4{
+       font-size: 6px;
+   }
+   .mH5{
+       font-size: 4px;
+   }
+
+
+
+}
+
+/* 1-2 */
+    .mA1{
+        font-size: 7px;
+    }
+    .mA2{
+        font-size: 4px;
+    }
+    .mA3{
+        font-size: 12px;
+    }
+    .w1{
+        font-size: 11px;
+    }
+    @media screen and (max-width: 576px) {
+        .mA1{
+            font-size: 3px;
+        }
+        .mA2{
+            font-size: 3px;
+        }
+        .mA4{
+            font-size: 9px;
+        }
+        .w1{
+            font-size: 9px;
+        }     
+     }
+
+/* 1-4 */
+        .f-6px{
+            font-size: 6px;
+        }
+        .f-16px{
+            font-size: 16px;
+        }
+        .f-7px{
+            font-size: 7px;
+        }
+        .f-10px{
+            font-size: 10px;
+        }
+        @media screen and (max-width: 576px) {
+            .f-16px{
+                font-size: 8px;
+            }
+            .f-7px{
+                font-size: 3px;
+            }
+            .f-6px{
+                font-size: 3px;
+            }     
+         }
+         
+/* intro1 */
+         .iH1{
+             font-size: 53px;
+             color: hsla(0, 0%, 100%, 0.575);
+         }
+         .iH2{
+             font-size: 15px;
+             color: hsla(0, 0%, 100%, 0.575);
+         }
+         .iH3{
+             font-size: 13px;
+             color: #ffffff;
+         }
+         .iH4{
+             font-size: 53px;
+             color: #274455;
+         }
+         .iH5{
+             font-size: 14px;
+         }
+
+         .i18{
+             font-size: 18px;
+         }
+         .i11{
+             font-size: 11px;
+         }
+         .i50{
+             font-size: 50px;
+         }
