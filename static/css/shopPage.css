@@ -75,6 +75,9 @@
     width: 246px;
     height: 246px;
 }
+.product-discription{
+    padding: 0 20px;
+}
 .p-price{
     margin-top: 22px;
 }
