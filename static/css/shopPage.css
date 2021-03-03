@@ -52,8 +52,8 @@ button, .clickable {
     height: 300px;
     display: flex;
     justify-content: space-around;
-    margin: 0 auto 50px auto;
-    width: 1044px;
+    margin: 0 auto 30px auto;
+    width: 1028px;
 }
     
 
@@ -76,7 +76,6 @@ button, .clickable {
 
 .product-section{
     display: flex;
-    justify-content: flex-start;
     width: 1044px;
     margin: 0 auto 50px auto;
     flex-wrap: wrap;
@@ -90,27 +89,32 @@ button, .clickable {
 
 .product-list{
     text-align: center;
-    max-width: 246px;
     position: relative;
-    margin: 20px 0.7% 0 0.7%;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding: 0;
+    margin-top: 20px;
 }
 .product-image{
     width: 246px;
     height: 246px;
+    margin: 0 auto;
 }
 
-.love-btn{
-    width: 39px;
-    height: 39px;
+.love-btn {
+    width: 28px;
+    height: 28px;
     position: absolute;
-    top: 250px;
-    right: 0;
+    top: 68%;
+    right: 3%;
 }
 .product-discription{
     padding: 0 30px;
 }
 .p-title{
     font-size: 18px;
+    margin: 2px 0 10px 0;
 }
 .p-main{
     margin-top: 22px;
@@ -118,31 +122,46 @@ button, .clickable {
 }
 .p-detail{
     font-size: 11px;
+    margin-bottom: 18px;
+}
+.p-adjust{
+    display: flex;
+    justify-content: space-between;
 }
 .p-price{
     margin: 28px 0 0 0;
     font-size: 17px;
+    margin-right: 3px;
     
+}
+.p-price-discount{
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-left: 3px;
 }
 
 /* product list 3 version */
 
 /* .product-list{
     text-align: center;
-    max-width: 330px;
     position: relative;
-    margin: 20px 0.85% 0 0.85%;
+    -ms-flex: 0 0 33.33%;
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 0;
+    margin-top: 20px;
 }
 .product-image{
     width: 330px;
     height: 330px;
+    margin: 0 auto;
 }
 
 .love-btn{
     width: 39px;
     height: 39px;
     position: absolute;
-    top: 331px;
+    top: 339px;
     right: 3px;
 
 }
@@ -151,7 +170,7 @@ button, .clickable {
 }
 .p-title{
     font-size: 24px;
-    margin-top: 9px;
+    margin-top: 2px;
 }
 .p-main{
     margin: 20px 0 0 0;
@@ -159,32 +178,42 @@ button, .clickable {
 }
 .p-detail{
     font-size: 14px;
-    margin: 10px 0 0 0;
+    margin: 10px 0 15px 0;
 }
 .p-price{
     margin: 28px 0 0 0;
     font-size: 24px;
+    margin-right: 8px;
     
+}
+.p-price-discount{
+    text-decoration: line-through;
+    font-size: 20px;
+    margin-left: 8px;
 } */
 
 /* product list 2 version */
-
-/* .product-list{
+/* 
+.product-list{
     text-align: center;
-    max-width: 500px;
     position: relative;
-    margin: 20px 0.85% 0 0.85%;
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding: 0;
+    margin-top: 20px;
+ 
 }
 .product-image{
     width: 500px;
     height: 500px;
+    margin: 0 auto;
 }
 
 .love-btn{
     width: 59px;
     height: 59px;
     position: absolute;
-    top: 495px;
+    top: 505px;
     right: 3px;
 
 }
@@ -193,7 +222,7 @@ button, .clickable {
 }
 .p-title{
     font-size: 35px;
-    margin-top: 10px;
+    margin-top: 4px;
 }
 .p-main{
     margin: 20px 0 0 0;
@@ -201,23 +230,29 @@ button, .clickable {
 }
 .p-detail{
     font-size: 20px;
-    margin: 13px 0 0 0;
+    margin: 13px 0 20px 0;
 }
 .p-price{
     margin: 32px 0 0 0;
     font-size: 35px;
-    
+    margin-right: 15px;
+}
+.p-price-discount{
+    text-decoration: line-through;
+    font-size: 30px;
+    margin-left: 15px;
 } */
 
 @media screen and (max-width: 576px) {
     .productBanner{
-        width: 376px;
+        width: 100%;
         height: 211px;
     }
     .sectionProduct{
     margin: unset;
     width: 100%;
     }
+
 
 /* top block         */
     .title{
@@ -226,44 +261,56 @@ button, .clickable {
     }
     .topBlock{
         width: 100%;
-        height: 150px;
+        height: 138px;
     }
     .topTitle{
-        width: 50%;
+        width: 31%;
         height: 75px;
+        font-size: 17px;
+        font-weight: 400;
+        line-height: 35px;
     }
 
     .productPic{
-        width: 16vw;
-        height: 16vw;
+        width: 100px;
+        height: 100px;
+        margin: auto 0;
     }
 /* product list */
-    .productList{
-        width: 376px;
+    .product-section{
+        width: 100%;
     }
-    .listPic{
-        width: 43vw;
-        height: 43vw;
+    .product-list{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
     }
-    .heart{
-        bottom: -26px;
-        right: 0;
-        background-color: unset;
-        
+    .product-image{
+        width: 47vw!important;
+        height: 47vw!important;
+        margin: 0 auto;
     }
-    .mainName{
-        width: 157px;
-        height: 11px;
-        margin-top: 10px;
+    .love-btn {
+        width: 25px;
+        height: 25px;
+        position: absolute;
+        top: 67%;
+        right: 4%;
     }
-    .secondName{
-        width: 157px;
+    .p-title{
+        font-size: 16px;
     }
-    .detail{
-        width: 157px;
+    .p-main{
+        font-size: 14px;
+        margin-top: 2px;
+        margin-bottom: 5px;
     }
-    .price{
-        width: 157px;
+    .p-detail{
+        font-size: 12px;
+        margin-bottom: 5px;
+    }
+    .p-price-discount{
+        font-size: 10px;
     }
 }
 
@@ -271,7 +318,7 @@ button, .clickable {
 
 
 /* 平板 */
-@media screen and (max-width: 768px) {
+@media screen and (min-width: 768px) and (max-width: 1024px){
     .sectionProduct{
         margin: 0;
         width: 100%;
@@ -283,15 +330,64 @@ button, .clickable {
     } 
     .topBlock{
         width: 100%;
-        height: 200px;
+        height: 205px;
+    }
+    .productPic{
+        width: 168px;
+        height: 168px;
     }
     
     
     /* product list */
-    .productList{
-        width: 768px;
-        padding: 0;
+    .product-section{
+        width: 100%;
+    }
+    .product-list{
+        -ms-flex: 0 0 50%;
+        flex: 0 0 50%;
+        max-width: 50%;
+    }
+    .product-discription{
+        padding: 0 40px;
+    }
+    .product-image{
+        width: 349px;
+        height: 349px;
+        margin: 0 auto;
+    }
+    .love-btn{
+            width: 42px;
+            height: 42px;
+            position: absolute;
+            top: 69%;
+            right: 4%;
+    }
+    .p-title{
+        font-size: 26px;
+        margin: 0 0;
+    }
+    .p-main{
+        font-size: 16px;
+    }
+    .p-detail{
+        font-size: 16px;
+    }
+    .p-price{
+        font-size: 26px;
+    }
+    .p-price-discount{
+        font-size: 26px;
     }
 
 
 }
+@media screen  and (min-width: 1024px) and (max-width: 1024px){
+    .love-btn {
+        width: 42px;
+        height: 42px;
+        position: absolute;
+        top: 69%;
+        right: 16%;
+    }
+  
+  }

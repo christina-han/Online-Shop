@@ -1,0 +1,240 @@
+
+  button, .clickable {
+    display: block;
+    all: unset;
+    cursor: pointer;
+  }
+  
+  button:focus, label:focus {
+    outline:0;
+  }
+  
+  .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+  /* .rwd-display{
+      display: none;
+  } */
+
+/* bread crumb */
+.bread-container{
+    margin: 186px 26% 70px 26%;
+    display: flex;
+    justify-content: space-between;
+}
+.step{
+    text-align: center;
+    justify-content: center; 
+    width: 13%;
+}
+.bread-icon{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    position: relative;
+}
+.icon-checked{
+    background-color: #DDBB5E;
+    border: 1px solid #707070;
+}
+.icon-unchecked{
+    background-color: #ffffff;
+    border: 1px solid #707070;
+}
+.icon-complict{
+    background-color: #274455;
+    border: 1px solid #707070;
+}
+.bread-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#DDBB5E;   
+}
+.bread-title{
+    margin-top: 1rem;
+    color: #707070;
+}
+.progress-bar{
+    background-color: #DDBB5E;
+    width: 10%;
+    height: 3px;
+    margin-top: 2.5%;
+}
+.no-progress{
+    background-color: transparent;
+}
+/* detail */
+.order-title{
+    display: block;
+    text-align: center;
+    margin-top: 6rem;
+    color: #707070;
+}
+.complict-icon{
+    display: block;
+    margin: 0 auto;
+}
+
+.order-container{
+    margin: 2.5rem auto 90px auto;
+    width: 55%;
+    border: 1px solid #707070;
+    padding: 5rem 2rem 3rem 2rem;
+    box-shadow: 3px 3px 8px rgb(175, 175, 175);
+}
+.order-section{
+    margin: 5rem auto 2rem auto;
+    width: 50%;
+    padding-left: 25%;
+}
+.user-information{
+    margin: 1rem 0;
+    display: flex;
+    /* padding: 0 0 0 2rem; */
+}
+.user-title{
+    width: 29%;
+    display: block;
+    display: flex;
+}
+.user-detail{
+    color: #C1BFBF;
+    display: block;
+    width: 100%;
+}
+.yellow-color{
+    color: #DDBB5E;
+}
+.step-section{
+    display: flex;
+    justify-content: flex-end;
+}
+.confirm-btn{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.8% 3.5%;
+    border-radius: 3px;
+    margin: 0 1%;
+    display: block;
+ }
+ /* ipad */
+ @media screen and (min-width: 768px) and (max-width: 1024px) {
+    .bread-container{
+        margin: 100px 10% 70px 10%;
+        display: flex;
+        justify-content: space-between;
+    }
+    .order-container {
+        margin: 0 auto;
+        width: 80%;
+    }
+    .order-section {
+        width: 80%;
+    }
+
+    .order-title{
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+        font-size: 20px;
+    }
+ }
+
+ @media screen and (max-width: 576px) {
+    .rwd-display{
+        display: unset;
+    }
+    /* bread crumb */
+
+    .bread-container{
+        margin: 25px 0;
+        width: 375px;
+        justify-content: space-around;
+        position: relative;
+    } 
+    
+    .bread-icon {
+        width: 35px;
+        height: 35px;
+    }
+    .bread-img{
+        width: 6vw;
+    }
+    .step{
+        width: unset;
+        position: relative;
+
+    }
+    .progress-bar{
+        height: 1px;
+    }
+   .pb1{
+       position: absolute;
+       top: 7px;
+       left: 65px;
+       width: 8%;
+   }
+   .pb2{
+       position: absolute;
+       top: 7px;
+       left: 150px;
+        width: 8%;
+   }
+   .pb3{
+       position: absolute;
+       top: 7px;
+       left: 226px;
+       width: 7%;
+   }
+   .pb4{
+       position: absolute;
+       top: 7px;
+       left: 293px;
+       width: 7%;
+   }
+    .p-step{
+        width: 15.5%;
+        padding: 0 2px 0 0;
+
+    }
+ 
+
+
+    /* detail */
+    .order-container {
+        width: 359px;
+        margin: 3rem auto 0 auto;
+        border: 0.5px solid #707070;
+        box-shadow: none;
+        padding: 5rem 0 0 0;
+    }
+    .order-title{
+        display: none;
+    }
+    .order-section{
+        margin: 3.5rem auto 0 auto;
+        width: 90%;
+        padding-left: 0;
+    }
+    .confirm-btn{
+        display: unset;
+        margin: 5rem 0;
+    }
+    .step-section{
+        display: block;
+        text-align: center;
+        justify-content: unset;
+    }
+    .user-title{
+        width: 60%;
+    }
+    
+    .confirm-btn{
+        padding: 2% 8%;
+        border-radius: 1px;
+    }
+   
+  }

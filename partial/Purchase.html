@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <link rel="stylesheet" href="./CSS/Purchase.css">
+    <title>購買頁 ｜ kerlineshop</title>
+
+    <!-- botstrap CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.3/css/bootstrap.min.css">
+    <!-- icon CDN -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- owlcarousel.CDN -->
+    <link rel="stylesheet" href="./CSS/owl/owl.carousel.min.css">
+    <link rel="stylesheet" href="./CSS/owl/owl.theme.default.min.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <nav id="navbar" class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+        <a class="navbar-brand navbar-brand-cum" href="./index.html">
+            <img class="nav-cum-img" src="./CSS/image/logo.png" alt="">
+        </a>
+        <a class="navbar-brand navbar-brand-mob" href="./index.html">
+            <img class="nav-mob-img" src="./CSS/image/Home.png" alt="">
+        </a>
+        <div class="collapse navbar-collapse" id="collapsibleNavId">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a id="navLinkItem" class="nav-link" href="#cartModal" data-toggle="modal">
+                        <i class="fa fa-heart"></i>
+                        <div id="cartNumber">0</div>
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-icon" data-target="#" href="">
+                        <i class="fa fa-sign-in" aria-hidden="true"></i> <span>登入</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-icon" data-target="#" href="">
+                        <i class="fa fa-sign-out"></i> <span>註冊</span></a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link nav-icon" data-target="#" href="./member.html">
+                        <i class="fa fa-users" aria-hidden="true"></i> <span>會員中心</span></a>
+                </li>
+                <li class="nav-item">
+                    <a id="navLinkItem" class="nav-link nav-icon" href="#ShopCartModal" data-toggle="modal">
+                        <i class="fa fa-shopping-cart"></i>
+                        <div id="ShopCartNumber">0</div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+    <!-- heartcart Model -->
+    <div class="modal fade py-5" id="cartModal" tabindex="-1" role="dialog" aria-labelledby="cartModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">
+                        <i class="fa fa-heart">我的最愛</i>
+                    </h5>
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-border">
+                        <thead>
+                            <tr>
+                                <th>產品圖</th>
+                                <th>產品名稱</th>
+                                <th>單價</th>
+                                <th>刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody"></tbody>
+                        <tfoot id="cartTableFoot"></tfoot>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button id="clearCartBtn" type="button" class="btn btn-danger">
+                        <i class="fa fa-trash"></i> 清空最愛
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fa fa-times"></i> 關閉
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- heart cart Model end -->
+    <!-- Shopcart Model -->
+    <div class="modal fade py-5" id="ShopCartModal" tabindex="-1" role="dialog" aria-labelledby="cartModal"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">
+                        <i class="fa fa-shopping-cart">購物車</i>
+                    </h5>
+                    <button type="button" class="close m-0" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-border">
+                        <thead>
+                            <tr>
+                                <th>產品圖</th>
+                                <th>產品名稱</th>
+                                <th>單價</th>
+                                <th>刪除</th>
+                            </tr>
+                        </thead>
+                        <tbody id="cartTableBody"></tbody>
+                        <tfoot id="cartTableFoot"></tfoot>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button id="clearCartBtn" type="button" class="btn btn-danger">
+                        <i class="fa fa-trash"></i> 清空購物車
+                    </button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">
+                        <i class="fa fa-times"></i> 關閉
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- shopcart Model end -->
+    <!-- nav end -->
+    <!-- section -->
+    <section id="section1">
+        <div class="main-item container px-0">
+            <div class="main-link row mx-0 col-lg-12">
+                <!-- recipeCarousel-carouser -->
+                <div class="main-project commodity-carouser container col-12 col-lg-7 px-0  py-0 mx-0 mt-3">
+                    <div class="main-project-item row">
+                        <div class="main-project-link col-12 col-lg-12 d-flex justify-content-center">
+                            <div id="carousel" class="carousel slide" data-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item inner-pic active">
+                                        <img src="./CSS/image/test.jpg">
+                                    </div>
+                                    <div class="carousel-item inner-pic">
+                                        <img src="./CSS/image/man/2.jpg">
+                                    </div>
+                                    <div class="carousel-item inner-pic">
+                                        <img src="./CSS/image/man/3.jpg">
+                                    </div>
+                                    <div class="carousel-item inner-pic">
+                                        <img src="./CSS/image/man/4.jpg">
+                                    </div>
+                                    <div class="carousel-item inner-pic">
+                                        <img src="./CSS/image/man/5.jpg">
+                                    </div>
+                                    <div class="carousel-item inner-pic">
+                                        <img src="./CSS/image/man/1.jpg">
+                                    </div>
+                                    <div class="carousel-item inner-pic">
+                                        <img src="./CSS/image/man/2.jpg">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="recipeCarousel" class="main-project-list carousel owl-carousel owl-theme pt-3">
+                            <div data-target="#carousel" data-slide-to="0" class="inner-item">
+                                <img src="./CSS/image/test.jpg">
+                            </div>
+                            <div data-target="#carousel" data-slide-to="1" class="inner-item">
+                                <img src="./CSS/image/man/2.jpg">
+                            </div>
+                            <div data-target="#carousel" data-slide-to="2" class="inner-item">
+                                <img src="./CSS/image/man/3.jpg">
+                            </div>
+                            <div data-target="#carousel" data-slide-to="3" class="inner-item">
+                                <img src="./CSS/image/man/4.jpg">
+                            </div>
+                            <div data-target="#carousel" data-slide-to="4" class="inner-item">
+                                <img src="./CSS/image/man/5.jpg">
+                            </div>
+                            <div data-target="#carousel" data-slide-to="5" class="inner-item">
+                                <img src="./CSS/image/man/1.jpg">
+                            </div>
+                            <div data-target="#carousel" data-slide-to="6" class="inner-item">
+                                <img src="./CSS/image/man/2.jpg">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- recipeCarousel-carouser end -->
+                <div class="main-introduction col-12 col-lg-5 pl-3 justify-content-center">
+                    <div class="main-text">
+                        <p class="main-smallＭark mb-0 mt-2">2020 爆款</p>
+                        <h5 class="main-title mt-2 mb-1">個性時髦渲染排釦單邊綁帶洋裝</h5>
+                        <p class="main-detailed mb-2 mt-2">輕柔又保暖，每個細節都經過嚴選及改良，實現weofjop3jewjoiefoj</p>
+                        <div class="d-flex">
+                            <p class="main-price">NT$ 790</p> &ensp;
+                            <p class="main-price-before">NT$ 1190</p>
+                        </div>
+                    </div>
+                    <div class="main-color item-color">
+                        <input data-target="#carousel" data-slide-to="0" type="button" class="bg-danger">
+                        <input data-target="#carousel" data-slide-to="1" type="button" class="bg-success">
+                        <input data-target="#carousel" data-slide-to="2" type="button" class="bg-primary">
+                        <input data-target="#carousel" data-slide-to="3" type="button" class="bg-warning">
+                        <input data-target="#carousel" data-slide-to="4" type="button" class="bg-info">
+                        <input data-target="#carousel" data-slide-to="5" type="button" class="bg-success">
+                    </div>
+                    <select class="form-select mt-4" name="" id="">
+                        <option selected value="" disabled>----請選擇規格----</option>
+                        <option value="1">XS</option>
+                        <option value="1">S</option>
+                        <option value="1">M</option>
+                        <option value="1">L</option>
+                        <option value="1">XL</option>
+                    </select>
+                    <div class="counter d-flex">
+                        <div class="counter-container">
+                            <div class="counter-ui d-flex">
+                                <button class="counter-btn minusBtn" id="minusBtn"> - </button>
+                                <p id="result">0</p>
+                                <button class="counter-btn addBtn" id="addBtn"> + </button>
+                            </div>
+                        </div>
+                        <p class="form-quantity pl-3">庫存數 <span id="formQuantity">3</span> 件 </p>
+                    </div>
+                    <div class="main-prompt">
+                        <input onclick="showModal1()" type=" button" value="- 成分與保養 -" class="btn px-0"> <br>
+                        <input onclick="showModal2()" type="button" value="- 配送、換貨和退貨 -" class="btn">
+                        <!-- Modal1 -->
+                        <div class="modal py-5" tabindex="-1" role="dialog" id="Modal1">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">成分與保養</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>材質100%尼龍</p>
+                                        <p>材質100%尼龍</p>
+                                        <p>材質100%尼龍</p>
+                                        <p>材質100%尼龍</p>
+                                        <p>材質100%尼龍</p>
+                                        <p>材質100%尼龍</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal1 end -->
+                        <!-- Modal2 -->
+                        <div class="modal py-5" tabindex="-1" role="dialog" id="Modal2">
+                            <div class="modal-dialog" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title">配送、換貨和退貨</h5>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p class="text-center">欲辦理退貨，請先致電
+                                            02-2567-8271，聯絡本公司客服人員，客服人員會通知物流公司向您收取預退換貨之商品，若您未替商品投購金額保險，如不幸在寄回遺失或遭竊，WeddingCode
+                                            概不負責。本公司將全程錄影下檢查商品的完整性，退款方式將同於付款方式來辦理退款。
+                                            以下情況無法為您退貨:(1) 訂製及特殊商品，例如訂製特製商品、訂製款式與刻字商品…等 (2)超過七天鑑賞期
+                                            (3)原內包裝產品內容物，若有缺件、發票、包裝不齊、商品或珠寶毀損、刮傷、髒污…等包裝不完整。
+                                            如有其他退換貨相關問題，請直接與本公司客服人員聯繫:服務信箱：weddingcode8@gmail.com 服務電話：02-2567-8271
+                                            聯絡時間：週一至週五 12:00~21:00</p>
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-dismiss="modal">關閉</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Modal2 end -->
+                    </div>
+                    <button type="button" class="join-btn my-4">加入購物車</button>
+                    <button type="button" class="like-btn">收藏</button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="section2">
+        <div class="pro-explanation-item container">
+            <h3 class="text-center pt-5">商品資訊</h3>
+            <hr size="8px" width="100%">
+        </div>
+        <div class="pro-explanation-body container">
+            <p class="mx-0">
+                Marimekko是一家芬蘭設計公司，創辦於1951年，以原創印花和色彩設計聞名，是全球著名日常服飾品牌之一。產品包括高品質服飾、包袋、及周邊商品，從紡織品到餐桌用品的家具一應俱全，以大膽亮麗印花增添生活樂趣。
+            </p>
+            <img src="./CSS/image/man/1.jpg" alt="">
+            <p class="mx-0">慶祝每年的冬日歡樂時光，全新UNIQLO x Marimekko
+                2020秋冬聯名系列為節日限定，讓人聯想到冬季與家人朋友在家的舒適時光。簡約設計和實用性融為一體，兼具質感和簡單印花配色，任何時候都可穿著。本系列涵蓋女裝、童裝與嬰幼兒裝，希望您與您的家人朋友會喜歡充滿節慶氛圍的系列。
+            </p>
+            <img src="./CSS/image/man/2.jpg" alt="">
+            <p class="mx-0">慶祝每年的冬日歡樂時光，全新UNIQLO x Marimekko
+                2020秋冬聯名系列為節日限定，讓人聯想到冬季與家人朋友在家的舒適時光。簡約設計和實用性融為一體，兼具質感和簡單印花配色，任何時候都可穿著。本系列涵蓋女裝、童裝與嬰幼兒裝，希望您與您的家人朋友會喜歡充滿節慶氛圍的系列。
+            </p>
+            <img src="./CSS/image/man/3.jpg" alt="">
+            <p class="mx-0">慶祝每年的冬日歡樂時光，全新UNIQLO x Marimekko
+                2020秋冬聯名系列為節日限定，讓人聯想到冬季與家人朋友在家的舒適時光。簡約設計和實用性融為一體，兼具質感和簡單印花配色，任何時候都可穿著。本系列涵蓋女裝、童裝與嬰幼兒裝，希望您與您的家人朋友會喜歡充滿節慶氛圍的系列。
+            </p>
+            <hr size="8px" width="100%">
+        </div>
+    </section>
+    <!-- Favorite-owlcarouser -->
+    <section id="section3"></section>
+    <!-- Favorite-owlcarouser end -->
+    <!-- section end -->
+    <!-- footer Cum -->
+    <footer class="footer footer-cum text-center">
+        <div class="container footer-title pt-5 pb-3">
+            <h1>訂閱電子報</h1>
+            <div class="email">
+                <div class="email-section">
+                    <input class="email-input" type="text" placeholder="請輸入電子信箱">
+                </div>
+                <input class="btn-input btn btn-sm" type="button" value="送出">
+            </div>
+        </div>
+        <div class="footer-item pb-3 d-flex">
+            <div class="">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+            <div class="">
+                <a href=""><i class="fa fa-facebook-square" aria-hidden="true"></i></a>
+            </div>
+        </div>
+        <div class="footer-img">
+            <a href="./index.html"><img src="./CSS/image/logo.png" alt=""></a>
+        </div>
+        <div class="container footer-link">
+            <p>LINE service | KERLINESHOP@kerlineshop.com</p>
+            <p>© 2020 by KERLINESHOP</p>
+            <button type="button" class="btn"><i class="fa fa-sign-out" aria-hidden="true"></i>登出</button>
+        </div>
+    </footer>
+    <!-- footer Cum end -->
+    <!-- footer Mobile -->
+    <footer class="footer footer-mob text-center fixed-bottom footer-mobile bg-white">
+        <div class="container border-top">
+            <div class="row row-cols-auto pt-3">
+                <div class="col">
+                    <p><i class="fa fa-search" aria-hidden="true"></i></p>
+                </div>
+                <div class="col">
+                    <p><i class="fa fa-heart" aria-hidden="true"></i></p>
+                </div>
+                <div class="col">
+                    <p><i class="fa fa-bars" aria-hidden="true"></i></p>
+                </div>
+                <div class="col">
+                    <a href="./member-mobile.html">
+                        <p><i class="fa fa-users" aria-hidden="true"></i></p>
+                    </a>
+                </div>
+                <div class="col">
+                    <p><i class="fa fa-shopping-cart" aria-hidden="true"></i></p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer Mobile end -->
+
+
+    <!-- jquery.js -->
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous">
+        </script>
+    <!-- bootstrap.js -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous">
+        </script>
+    <!-- owlCarousel.js -->
+    <script src="./Js/owl/owl.carousel.min.js"></script>
+    =
+    <script src="./Js/index.js"></script>
+    <script src="./Js/Purchase.js"></script>
+    <script src="./Js/PurchaseProdustList.js"></script>
+</body>
+
+</html>

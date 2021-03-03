@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>confirm</title>
+    <link rel="stylesheet" href="/static/css/vendors/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/cart/confirm.css">
+    <link rel="stylesheet" href="/static/css/font.css">
+    <!-- <link rel="stylesheet" href="/static/css/header.css"> -->
+    <link rel="stylesheet" href="/static/css/vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+     <!-- swiper -->
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"></link>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
+</head>
+<body>
+
+    <main id="root-slot">
+<!-- bread crumb -->
+        <div class="bread-container">
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/confirm-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">確認購買清單</div>
+        </div>
+        <div class="progress-bar pb1"></div>
+
+        <div class="step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/recipient-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">填寫收件人資訊</div>
+        </div>
+        <div class="progress-bar pb2"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/payment-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">付款方式</div>
+        </div>
+        <div class="progress-bar no-progress pb3"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/receipt.icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">訂單資訊</div>
+        </div>
+        <div class="progress-bar no-progress pb4"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/order-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title ">完成訂單</div>
+        </div>
+    </div>
+<!-- order detail -->
+        <div class="order-container">
+            <div class="order-title">
+                <span class="s20 order-product1">商品</span>
+                <span class="s20 order-size1">規格</span>
+                <span class="s20 order-quantity1">數量</span>
+                <span class="s20 order-price1">總價</span>
+                <span class="s20 order-delete1">刪除</span>
+            </div>
+            <div class="order-line"></div>
+<!-- product list 1 -->
+            <div class="order-item">
+                <input type="checkbox" id="c1" name="cc" />
+                 <label class="label-flex"for="c1"><span></span></label>
+                <div class="order-product product-section">      
+                    <div class="img-box"><img class="cover-fit" src="/static/images/cart/order-image1.png" alt=""></div>
+                    <div class="pruduct-p">   
+                        <p class="i18">個性長版外套</p>
+                        <p class="i10 phone-display">$780</p>
+                        <p class="s12">2020新款</p>
+                        <p class="s12 over-flow">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的穿著感。帥氣百搭！</p>
+                    </div> 
+                </div>
+                <!-- ----- -->
+                <div class="section">
+               <div class="order-size i12">
+                   <select class="order-select mr-25" name="" id="">
+                       <option class="i12" value="1">黑色</option>
+                   </select>
+                   <select class="order-select p-s" name="" id="">
+                       <option class="i12" value="1">M</option>
+                   </select>
+               </div> 
+               <!-- ----- -->
+               <div class="order-quantity i12">
+                    <select class="order-select p-v" name="" id="">
+                       <option value="1">1</option>
+                   </select>
+                </div>
+                <!-- ----- -->
+                <div class="order-price">
+                    <p class="price-p">NT$780</p>
+                </div>
+                <!-- ----- -->
+                <div class="order-delete">
+                    <div class="delete-btn i12">刪除
+                        <img src="/static/images/cart/delete.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+<!-- product list 2 -->
+            <div class="order-item">
+                <input type="checkbox" id="c2" name="cc" />
+                 <label class="label-flex"for="c2"><span></span></label>
+                <div class="order-product product-section">
+                    <div class="img-box"><img class="cover-fit" src="/static/images/cart/order-image2.png" alt=""></div>
+                    <div class="pruduct-p">   
+                        <p class="i18">個性長版外套</p>
+                        <p class="i10 phone-display">$780</p>
+                        <p class="s12">2020新款</p>
+                        <p class="s12 over-flow">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的穿著感。帥氣百搭！</p>
+                    </div> 
+                </div>
+                <!-- ----- -->
+                <div class="section">
+                    <div class="order-size i12">
+                        <select class="order-select mr-25" name="" id="">
+                            <option class="i12" value="1">黑色</option>
+                        </select>
+                        <select class="order-select p-s" name="" id="">
+                            <option class="i12" value="1">M</option>
+                        </select>
+                    </div> 
+                    <!-- ----- -->
+                    <div class="order-quantity i12">
+                            <select class="order-select p-v" name="" id="">
+                            <option value="1">1</option>
+                        </select>
+                        </div>
+                        <!-- ----- -->
+                        <div class="order-price">
+                            <p class="price-p">NT$780</p>
+                        </div>
+                        <!-- ----- -->
+                        <div class="order-delete">
+                            <div class="delete-btn i12">刪除
+                                <img src="/static/images/cart/delete.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+ <!-- product list 3 -->
+            <div class="order-item">
+                <input type="checkbox" id="c3" name="cc" />
+                 <label class="label-flex"for="c3"><span></span></label>
+                <div class="order-product product-section">
+                    <div class="img-box"><img class="cover-fit" src="/static/images/cart/order-image3.png" alt=""></div>
+                    <div class="pruduct-p">   
+                        <p class="i18">個性長版外套</p>
+                        <p class="i10 phone-display">$780</p>
+                        <p class="s12">2020新款</p>
+                        <p class="s12 over-flow">輕柔又保暖，每個細節都經過嚴選及改良，實現更舒適的穿著感。帥氣百搭！</p>
+                    </div> 
+                </div>
+                <!-- ----- -->
+                <div class="section">
+               <div class="order-size i12">
+                   <select class="order-select mr-25" name="" id="">
+                       <option class="i12" value="1">黑色</option>
+                       
+                   </select>
+                   <select class="order-select p-s" name="" id="">
+                       <option class="i12" value="1">M</option>
+                   </select>
+               </div> 
+               <!-- ----- -->
+               <div class="order-quantity i12">
+                    <select class="order-select p-v" name="" id="">
+                       <option value="1">1</option>
+                   </select>
+                </div>
+                <!-- ----- -->
+                <div class="order-price">
+                    <p class="price-p">NT$780</p>
+                </div>
+                <!-- ----- -->
+                <div class="order-delete">
+                    <div class="delete-btn i12">刪除
+                        <img src="/static/images/cart/delete.png" alt="">
+                    </div>
+
+                </div>
+            </div>
+        </div>
+            <div class="order-line"></div>
+<!-- total price  -->            
+           
+                <div class="product-price"> 
+                    <div class="total-quantity i20">共選擇3件</div>
+                    <div class="total-price">
+                        <span class="s20 price-title">商品金額</span>
+                        <span class="s20 price">NT$2340</span>
+                    </div>
+                    <div class="total-price">
+                        <span class="s20 price-title">促銷折抵</span>
+                        <span class="s20 discount">-NT$300</span>
+                        <button class="i12 modal-btn">明細</button>
+                    </div>
+            
+                    <div class="total-price">
+                        <span class="s20 price-title">小計</span>
+                        <span class="s20 price">NT$1950</span>
+                        <span class="s15 ps">(未包含運費等相關費用)</span>
+                    </div>  
+                    <div class="button-container">
+                        <button class="s19 next-btn">
+                           <a href="/partial/cart/recipient.html">下一步</a>
+                       </button>
+                       
+                    </div> 
+                               
+             </div>
+             <!-- modal -->
+             <div class="modal-overlay">
+                <div class="modal-container">
+                   
+                        <div class="s15 modal-title">促銷折抵</div>
+                       <ul>
+                           <li class="s15 discount-li">滿千送百 -NT$200</li>
+                           <li class="s15 discount-li">首購優惠 -NT$100</li>
+                       </ul>
+                       <div class="block-line"></div>
+                       <div class="i15 discount-total">小計 -NT$300</div>
+                       <button class="s15 close-btn">確定</button>
+                                   
+                </div>
+             </div>
+             <!-- modal -->
+           
+            
+        </div>
+        <div class="marginb"></div>
+</main>    
+     <!-- <script src="/static/js/modal.js"></script> -->
+     <script src="/static/js/cart/payment-modal.js"></script>
+    <!-- <script src="./static/js/tab.js"></script> -->
+
+     <!-- swiper -->
+     <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script> 
+     <script src="/static/js/nav-swiper.js"></script>
+ 
+
+</body>
+</html> 

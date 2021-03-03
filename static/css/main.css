@@ -7,6 +7,7 @@
 *::before,
 *::after {
   box-sizing: border-box;
+  /* border: 1px solid #000; */
 }
 
 /* Hide scrollbar
@@ -33,7 +34,7 @@ body::-webkit-scrollbar {
 }
 
 html, body {
-  font-family: "Microsoft JhengHei", sans-serif;
+
 }
 
 img {
@@ -52,6 +53,9 @@ button:focus, label:focus {
 
 .btn:not(:disabled):not(.disabled) {
   cursor: pointer;
+}
+a{
+  all: unset;
 }
 
 /* global utility */
@@ -83,7 +87,9 @@ button:focus, label:focus {
   cursor: pointer;
   background-color: transparent;
 }
-
+a {
+  text-decoration: none;
+}
 .text-white {
   color: var(--white);
 }
@@ -114,175 +120,49 @@ button:focus, label:focus {
   height: 100%;
   object-fit: cover;
 }
-@media screen and (max-width: 576px) {
-  .brand{
-    display: none;
-  }
-  
-  .height-adjust {
-    max-width: 150px; 
-    margin: 4.5% 2rem 0 2rem;
-}
-.product-opts-panel{
-  display: none;
-}
-  .w-full {
-    width: 376px;
-  }
-  .product-img{
-    width: 376px;
-    height: 467px;
-  }
-  .product-news{
-    flex-wrap: wrap;
-    width: 100% ;
-    margin-top: 0;
-  }
-}
-/* swiper css */
-.swiper-container {
-  max-width: 400px;
-  margin: 0 2rem;
-  height: 38px;
-  text-align: center;
-}
 
-.swiper-slide {
-  display: flex;
-}
-
-.btn {
-  display: inline-block;
-  font-weight: 400;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: middle;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  border: 1px solid transparent;
-  padding: .125rem 3rem;
-  font-size: 1rem;
-  line-height: 1.5;
-}
-.btn-outline-basic {
-  color: var(--primary-color);
-  background-color: transparent;
-  border: 4px solid;
-}
-@media screen and (min-width: 1200px) {
-  .height-adjust{
-    display: block;
-    margin-top: 2.5%;
-    
-    margin: 0 auto;
-  }
-}
-@media screen and (min-width: 1416px) {
-  .height-adjust{
-    display: block;
-    margin-top: 2.5%;
-  }
-}
-@media screen and (min-width: 1590px) {
-  .height-adjust{
-    display: block;
-    margin-top: 5.5%;
-  }
-}
-@media screen and (min-width: 1600px) {
-  .height-adjust{
-    display: block;
-    margin-top: 2.5%;
-  }
-}
-@media screen and (min-width: 1692px) {
-  .height-adjust{
-    display: block;
-    margin-top: 2.5%;
-  }
-}
-@media screen and (min-width: 1705px) {
-  .height-adjust{
-    display: block;
-    margin-top: 3%;
-  }
-}
-@media screen and (min-width: 1920px) {
-  .height-adjust{
-    display: block;
-    margin-top: 3%;
-  }
-}
-
-/* custom layout  */
-.navbar {
-  position: fixed;
-  right: 0;
-  left: 0;
-  top: 0;
-  background-color: var(--primary-color);
-  padding: .5rem 1rem;
-  z-index: 1;
-}
-
-.product-tab {
-  display: inline-block;
-}
-
-.nav-top-bar {
-  justify-content: space-between;
-}
-
-.brand {
-  height: 70px;
-  width: 210px;
-  background-color: var(--white);
-  color: var(--primary-color);
-  font-size: 4rem;
-  text-align: center;
-}
-
-.product-opts-pannel {
-  height: 100%;
-  align-items: center;
-}
-.a-header{
-  color: #fff;
-  text-decoration: none;
-}
 
 /* main content */
-.container {
-  padding-top: 86px;
-}
 
-.product-news {
-  width: 80%;
-  margin: 2rem auto;
+.index-section{
+  max-width: 1280px;
+  margin: 5rem auto 2rem auto;
 }
-
-.product-img {
-  flex:2 0 50%;
+.product{
+  display: flex;
+  margin: 1rem 0 0 0;
 }
+.big-img{
+  width: 840px;
+  height: 454px;
+ 
+}
+.prod-title{
+  font-size: 43px;
+  font-weight: 700;
 
-.product-body {
-  flex:1 0 50%;
+}
+.product-box{
   text-align: center;
-  margin: 2rem;
+  align-items: center;
+  margin: auto 0;
+  width: 40%;
+  top: 50%;
+  transform: translateY(-23%);
 }
-
-.product-desc {
-  max-width: 300px;
-  max-height: 50px;
-  margin: 1rem auto;
-  line-height: 1.5;
-  overflow: hidden;
-  text-overflow: ellipsis;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
+.prod-ps{
+  font-size: 13px;
+  margin-bottom: 25px;
+}
+.view-btn{
+  color: #274455;
+  border: 1px solid #274455;
+  padding: 1px 30px;
+}
+.view-btn:hover{
+  color: #f8f9fa;
+  border: 1px solid #274455;
+  background-color: #274455;
 }
 /* product category panel */
 .product-head {
@@ -292,6 +172,9 @@ button:focus, label:focus {
 .product-sub-head {
   color: var(--primary-color);
   font-size: 1.25rem;
+}
+.sub-head{
+  font-size: 1.2rem;
 }
 
 .product-list {
@@ -307,7 +190,7 @@ button:focus, label:focus {
 }
 .menu-trigger {
   position: absolute;
-  top: 50%;
+  top:50%;
   left: -2.125rem;
   transform: translateY(-50%);
   transition: right .3s;
@@ -316,17 +199,20 @@ button:focus, label:focus {
 }
 .menu-panel {
   position: fixed;
-  top: 86px;
+  top: 0;
   right: 0;
   width: 100%;
   max-width: 300px;
-  max-height: calc(100% - 86px);
-  min-height: 100vh;
-  padding: 1rem 1.25rem;
+  /* max-height: calc(100% - 86px); */
   background-color: var(--white);
   border-left: 1px solid var(--primary-color);
   transform: translateX(300px);
   transition: transform .3s ease-in;
+}
+.menu-scroll{
+  height: 100vh;
+  overflow: scroll;
+  padding: 80px 1.25rem 40px 1.25rem;
 }
 
 .search-panel {
@@ -356,46 +242,7 @@ button:focus, label:focus {
 
 }
 
-/* footer */
-.footer-panel {
-  padding: 2rem;
-  background-color: var(--primary-color);
-  text-align: center;
-}
 
-.footer {
-  width: 50%;
-  max-width: 400px;
-  margin: 0 auto;
-}
-
-.subscribe-panel {
-  margin: 1rem;
-}
-
-.subscribe-panel > input {
-  all: unset;
-  width: 100%;
-  text-align: center;
-  border-bottom: 1px solid;
-  padding: .875rem;
-}
-
-.subscribe-head {
-  font-size: 3.125rem;
-  font-weight: 100;
-}
-.social-icon {
-  display: flex;
-  max-width: 240px;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0 auto;
-}
-.footer-icon {
-  margin: .25rem .75rem;
-  font-size: 2rem;
-}
 /* base - 0.125  */
 .m-y-5 {
   margin: .625rem auto;
@@ -410,3 +257,55 @@ button:focus, label:focus {
 .ml-4 {
   margin-left: .5rem;
 }
+@media screen and (min-width: 768px) and (max-width: 1024px){
+  /* main content */
+
+.index-section{
+  width: 100%;
+  margin: 5rem auto 2rem auto;
+}
+
+.big-img{
+  width: 502px;
+  height: 272px;
+ 
+}
+.prod-title{
+  font-size: 25px;
+  font-weight: 600;
+
+}
+
+
+
+}
+
+@media screen and (max-width: 576px) {
+
+  /* main content */
+  .index-section{
+    width: 100%;
+    margin: 5rem auto 2rem auto;
+  }
+  .product{
+    flex-wrap: wrap;
+  }
+  .product-box {
+    position: unset;
+    transform: unset;
+    width: 100%;
+    margin-bottom: 1rem;
+}
+  .big-img{
+    width: 100vw;
+    height: 272px;
+   
+  }
+  .prod-title{
+    font-size: 25px;
+    font-weight: 600;
+  
+  }
+  
+}
+

@@ -3,13 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./static/css/vendors/normalize.min.css">
-    <link rel="stylesheet" href="./static/css/vendors/font-awesome-4.7.0/css/font-awesome.min.css">
-    <link rel="stylesheet" href="./static/css/vendors/swiper/swiper.min.css">
-    <script src="./static/js/vendors/swiper/swiper.min.js"></script>
-    <link rel="stylesheet" href="./static/css/font.css">
+
+    <link rel="stylesheet" href="/static/css/vendors/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/vendors/font-awesome-4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" href="/static/css/font.css">
+    <!-- swiper -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.carousel.min.css"></link>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/assets/owl.theme.default.min.css"></link>
     <title>intro1</title>
     <style>
+
+
+        button, .clickable {
+        display: block;
+        all: unset;
+        cursor: pointer;
+        }
+
+        button:focus, label:focus {
+        outline:0;
+        }
+
+        .btn:not(:disabled):not(.disabled) {
+        cursor: pointer;
+        }
+
         .cover-fit {
             width: 100%;
             height: 100%;
@@ -22,7 +41,11 @@
             text-align: center;
             overflow: hidden;
             position: relative;
+            background-color: cadetblue;
            
+        }
+        .bs-image{
+            color: #F8F6F6;
         }
         
         .bg-image{
@@ -64,6 +87,10 @@
             .bg-image{
             width: 100%;         
         }
+        .cover-hover{
+            width: 99.5%;
+         
+        }
 
    
     }
@@ -71,14 +98,36 @@
         .bs-image{
             text-align: center;
             margin: 50px auto 50px auto ;
+            color: #F8F6F6;
+            max-width: 1025px;
+            display: flex;
+            position: relative;
         }
         .none{
             display: none;
         }
+        .item{
+            width: 197px;
+        }
         .demo-img{
-            width: 18%;
-            height: 18vw;
-            margin: 0 0.2%;
+            width: 197px;
+            height: 197px;
+        }
+        .tab-prev1,.tab-prev2,.tab-prev3{
+            position: absolute;
+            cursor: pointer;
+            top: 37%;
+            left: -4%;
+            z-index: 2;
+
+        }
+        .tab-next1,.tab-next2,.tab-next3{
+            position: absolute;
+            cursor: pointer;
+            top: 37%;
+            right: -4%;
+            z-index: 2;
+
         }
         .bs-title{
             text-align: center;
@@ -109,12 +158,28 @@
         .more-button{
             text-decoration: none;
         }
-        @media screen and (max-width: 768px) {
+        @media screen and (min-width: 768px) and (max-width: 1024px){
+            .tab-prev1,.tab-prev2,.tab-prev3{
+            display: none;
+
+        }
+        .tab-next1,.tab-next2,.tab-next3{
+         display: none;
+        }
+        }
+        @media screen and (max-width: 768px){
             .bs-image{
                 width: 768px;
-                height: 467px;
+                height: 200px;
 
             }
+             .tab-prev1,.tab-prev2,.tab-prev3{
+            display: none;
+
+        }
+        .tab-next1,.tab-next2,.tab-next3{
+         display: none;
+        }
     
    
     }
@@ -125,14 +190,32 @@
                 margin: 0 4px 34px 4px;
             }
             .bs-image{
-                width: 375px;
-                height: 42px;
+                width: 350px;
+                margin: 30px auto;
+                height: auto;
 
             }
-            .demo-img{
-                width: 18vw;
-                height: 18vw;
+           
+            .item{
+                width: 170px!important;
             }
+            .demo-img{
+                width: 170px!important; 
+                height: 170px;
+                margin: 0;
+            }
+            .tab-prev1,.tab-prev2,.tab-prev3{
+            top: 37%;
+            left: 1%;
+           
+
+        }
+        .tab-next1,.tab-next2,.tab-next3{
+            position: absolute;
+            cursor: pointer;
+            top: 37%;
+            right: 1%;
+        }
     
    
     }
@@ -143,76 +226,171 @@
     <div class="wrapper">
 <!-- image block -->
         <div class="cover-block">
-            <img class="bg-image cover-fit" src="./static/images/intro1.png" alt="">
+            <img class="bg-image cover-fit" src="/static/images/intro1.png" alt="">
             <div class="cover-hover">
                 <div class="cover-title iH1">Man's in</div>
                 <div class="cover-detail iH2">Almost before we knew it, we had left the ground.</div>
-                <a class="v-button iH3" onclick="loadDoc(docNames[4]);" href="#">View</a>
+                <a class="v-button iH3" href="/partial/shopPage.html">View</a>
             </div>
         </div>
 <!-- best sell -->
         <div class="bs-image">
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>          
+            <button class="tab-prev1 customPrevBtn"><img src="/static/images/prev-arrow.png" alt="" style="width: 30px;"></button> 
+            <div class="owl-carousel owl-theme owl-carousel1">
+               
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+ 
+            </div>
+            <button class="tab-next1 customNextBtn"><img src="/static/images/next-arrow.png" alt="" style="width: 30px;"></button> 
          </div>    
          <div class="w-section">
             <div class="bs-title iH4">Best sellers</div>
-            <a class="more-button iH5" onclick="loadDoc(docNames[4]);" href="javascript:;"><div class="more">查看更多</div></a>
+            <a class="more-button iH5" href="/partial/shopPage.html"><div class="more">查看更多</div></a>
         </div>
 <!-- image block -->
         <div class="cover-block">
-            <img class="bg-image cover-fit" src="./static/images/intro1.png" alt="">
+            <img class="bg-image cover-fit" src="/static/images/intro1.png" alt="">
             <div class="cover-hover">
                 <div class="cover-title iH1">Man's in</div>
                 <div class="cover-detail iH2">Almost before we knew it, we had left the ground.</div>
-                <a class="v-button iH3" onclick="loadDoc(docNames[4]);" href="#">View</a>
+                <a class="v-button iH3" href="/partial/shopPage.html">View</a>
             </div>
         </div>
 <!-- best sell -->
         <div class="bs-image">
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>          
+            <button class="tab-prev2 customPrevBtn" id="tab-prev"><img src="/static/images/prev-arrow.png" alt="" style="width: 30px;"></button> 
+            <div class="owl-carousel owl-theme owl-carousel2">
+               
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+ 
+            </div>
+            <button class="tab-next2 customNextBtn" id="tab-next1"><img src="/static/images/next-arrow.png" alt="" style="width: 30px;"></button> 
          </div>    
          <div class="w-section">
             <div class="bs-title iH4">Best sellers</div>
-            <a class="more-button iH5" onclick="loadDoc(docNames[4]);" href="javascript:;"><div class="more">查看更多</div></a>
+            <a class="more-button iH5" href="/partial/shopPage.html"><div class="more">查看更多</div></a>
         </div>
 <!-- image block -->
         <div class="cover-block">
-            <img class="bg-image cover-fit" src="./static/images/intro1.png" alt="">
+            <img class="bg-image cover-fit" src="/static/images/intro1.png" alt="">
             <div class="cover-hover">
                 <div class="cover-title iH1">Man's in</div>
                 <div class="cover-detail iH2">Almost before we knew it, we had left the ground.</div>
-                <a class="v-button iH3" onclick="loadDoc(docNames[4]);" href="#">View</a>
+                <a class="v-button iH3" href="/partial/shopPage.html">View</a>
             </div>
         </div>
 <!-- best sell -->
         <div class="bs-image">
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>
-            <a onclick="loadDoc(docNames[0]);" href="javascript:;"><img class="demo-img cover-fit" src="./static/images/intro-image.png" alt=""></a>          
+            <button class="tab-prev3 customPrevBtn" id="tab-prev"><img src="/static/images/prev-arrow.png" alt="" style="width: 30px;"></button> 
+            <div class="owl-carousel owl-theme owl-carousel3" >
+               
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+                <div class="item" style="width:197px"><a href="/partial/manCart.html"><img class="demo-img cover-fit" src="/static/images/Shop-img.jpg" alt=""></a></div>
+ 
+            </div>
+            <button class="tab-next3 customNextBtn" id="tab-next"><img src="/static/images/next-arrow.png" alt="" style="width: 30px;"></button> 
          </div>    
          <div class="w-section">
             <div class="bs-title iH4">Best sellers</div>
-            <a class="more-button iH5" onclick="loadDoc(docNames[4]);" href="javascript:;"><div class="more">查看更多</div></a>
+            <a class="more-button iH5" href="/partial/shopPage.html"><div class="more">查看更多</div></a>
         </div>
+
        
 
 
 
-
-
-
-
     </div>
+         <!-- swiper -->
+         <script src='https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js'></script>
+         <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.0.0-beta.2.4/owl.carousel.min.js"></script> 
+
+    <script>
+
+
+    $('.owl-carousel1').owlCarousel({
+    margin:10,
+    loop:false,
+    autoWidth:true,
+    dots: false,
+    items:4
+    })
+
+    var owl1 = $('.owl-carousel1');
+    owl1.owlCarousel();
+    $('.tab-next1').click(function() {
+        owl1.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.tab-prev1').click(function() {
+        owl1.trigger('prev.owl.carousel', [600]);
+    })
+
+// ----------------------
+
+    $('.owl-carousel2').owlCarousel({
+    margin:10,
+    loop:false,
+    autoWidth:true,
+    dots: false,
+    items:4
+    })
+
+    var owl2 = $('.owl-carousel2');
+    owl2.owlCarousel();
+    $('.tab-next2').click(function() {
+        owl2.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.tab-prev2').click(function() {
+        owl2.trigger('prev.owl.carousel', [600]);
+    })
+// ----------------------
+
+    $('.owl-carousel3').owlCarousel({
+    margin:10,
+    loop:false,
+    autoWidth:true,
+    dots: false,
+    items:4
+    })
+
+    var owl3 = $('.owl-carousel3');
+    owl3.owlCarousel();
+    $('.tab-next3').click(function() {
+        owl3.trigger('next.owl.carousel');
+    })
+    // Go to the previous item
+    $('.tab-prev3').click(function() {
+        owl3.trigger('prev.owl.carousel', [600]);
+    })
+
+
+
+
+    
+
+    </script>
+
     
 </body>
 </html>

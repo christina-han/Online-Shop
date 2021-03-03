@@ -1,0 +1,210 @@
+a{
+    all: unset;
+}
+/* 手機版 */
+@media screen and (max-width: 576px){
+    .current-product {
+        display: unset!important;
+        width: 40px;
+        height: 40px;
+        border-radius: 100%;
+        border: 1px solid #303030;
+        position: absolute;
+        left: 44%;
+        top: 10%;
+    }
+    .display-flex{
+        display: flex;
+    }
+    .text-center{
+        text-align: center;
+    }
+   
+    /* picture group */
+    .phone-wrapper{
+        display: unset;
+    }
+    .picture-display{
+        width: 100%;
+    }
+
+    .phone-pic{
+        width: 100%;
+        padding: 0;
+    }
+    .item{
+        padding: 0 0;
+    }
+    .carousel-group{
+        margin: 20px 0 0 0 ;
+    }
+    .m-box-group{
+        width: 100vw;
+        overflow: hidden;
+        height: 128px;
+    }
+     /* phone product discribe */
+     .phone-prod{
+         padding: 0 20px;
+     }
+    .m-ptitle{
+        font-size: 28px;
+        font-weight: 600;
+        margin: 20px 0 10px 0;
+    }
+   
+    .m-price{
+        font-size: 18px;
+    }
+    .m-detail{
+        font-size: 14px;
+        margin: 2px 0;
+    }
+    /* color section */
+    .m-color-section{
+        width: 80%;
+        margin: 0 auto;
+    }
+    .m-color-group {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 5px 10px;
+        text-align: center;
+        justify-content: center;
+    }
+    .m-rate{
+        font-size: 12px;
+        margin: 25px 0 10px 0;
+    }
+    .m-color{
+        font-size: 18px;
+        margin: 10px 0;
+    }
+    .m-color-select{
+        width: 32%;
+        border: 0.5px solid #000000;
+        border-radius: 0;
+        text-align: center;
+    }
+    .m-quantity-select{
+        border: 1px solid #274455;
+        width: 80%;
+        border-radius: 0;
+        margin: 0 0 15px 0;
+        padding: 5px 0;
+    }
+    .m-quantity-size{
+        border: 1px solid #274455;
+        width: 80%;
+        border-radius: 0;
+        margin: 0 0 10px 0;
+        padding: 5px 0;
+    }
+    .m-quan {
+        width: 80%;
+        margin: 0 auto;
+        justify-content: space-between;
+    }
+    .quantity{
+        width: 66%;
+        text-align: center;
+    }
+    
+    .m-quantity{
+        border: 1px solid #274455;
+        width: 62%;
+    }
+    .m-stack{
+        margin: auto 0 auto 0;
+        font-size: 12px;
+    }
+
+    .m-ps{
+        font-size: 12px;
+        color: #8F8B8B;
+        margin-left: 8%;
+    }
+    .m-discribe{
+        font-size: 16px;
+        font-weight: 600;
+        margin: 20px 0 0 10%;
+    }
+    .product-info-panel{
+        margin: 0;
+    }
+ /* discribe section  */
+    .desc-section{
+        width: 100%;
+    }
+    .desc-body{
+        margin: 0;
+        padding: 0 1rem;
+    }
+    .line{
+        border-bottom: 0.5px solid #000000;
+        width: 100%;
+        margin: 0 0 20px 0;
+    }
+  
+    .m-more{
+        display:block;
+        width: 20%;
+        margin: 3rem auto 0 auto;
+        background-color: #274455;
+        color: #DDBB5E;
+        font-size: 12px;
+        text-align: center;
+        padding: 4px 0;
+    }
+    .comment-button button{
+        padding: 5px 20px;
+    }
+    .star {
+        margin: -4px 0 15px 8px;
+    }
+
+    /* carousel section */
+    .m-carousel-section{
+        padding-bottom: 4rem;
+    }
+    .m-box{
+        width: 100vw;
+        overflow: hidden;
+    }
+    .owl-carousel .owl-stage-outer {
+        height: 220px!important;
+    }
+    .m-carousel-title{
+        text-align: center;
+        margin: 30px 0 1rem 0 ;
+    }
+    .like-pic{
+        width: 113px;
+        text-align: center;
+        position: relative;
+    }
+    
+   .m-love{
+       position: absolute;
+       top: 79%;
+       right: 0; 
+    }
+    .c-title {
+        font-size: 14px;
+        font-weight: 500;
+        margin: 5px 0;
+    }
+    
+    .c-price{
+        font-size: 12px;
+    } 
+    .owl-item{
+        margin-right: 8px!important;
+    } 
+    .owl-carousel .owl-stage-outer {
+        height: 174px;
+    } 
+
+}
+
+

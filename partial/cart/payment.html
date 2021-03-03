@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/vendors/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/cart/payment.css">
+    <link rel="stylesheet" href="/static/css/font.css">
+    <title>payment</title>
+</head>
+<body>
+    <main id="root-slot">
+    <!-- bread crumb -->
+    <div class="bread-container">
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/confirm-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">確認購買清單</div>
+        </div>
+        <div class="progress-bar pb1"></div>
+
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/recipient-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">填寫收件人資訊</div>
+        </div>
+        <div class="progress-bar pb2"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/payment-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">付款方式</div>
+        </div>
+        <div class="progress-bar no-progress pb3"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/receipt.icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">訂單資訊</div>
+        </div>
+        <div class="progress-bar no-progress pb4"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/order-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title ">完成訂單</div>
+        </div>
+    </div>
+   
+ <!-- bread crumb end-->
+<!-- payment section -->
+    <section class="order-container">
+        <div class="sp20 grey-color p-title">選擇付款別</div>
+
+        <label class="s20 container grey-color">
+            <input type="checkbox" checked="checked">超商條碼付款
+            <span class="checkmark"></span>
+          </label> 
+          <span class="s14 low-detail">(訂單完成後「會員中心>訂單查詢」中會顯示該筆訂單付款帳號)</span>
+           
+          <label class="s20 container grey-color">
+            <input type="checkbox">ATM轉帳 
+            <span class="checkmark"></span>
+          </label>
+          <span class="s14 low-detail">(訂單完成後「會員中心>訂單查詢」中會顯示該筆訂單付款帳號)</span>
+          
+          <label class="s20 container grey-color">
+            <input type="checkbox">
+            <img class="credit-card" src="/static/images/cart/card-icon.png" alt="">
+            <span class="checkmark"></span>
+          </label>
+          
+          <label class="s20 container grey-color">
+            <input type="checkbox">貨到付款
+            <span class="checkmark"></span>
+          </label>
+
+          <div class="sp20 grey-color discount-title p-title">選擇優惠卷</div>
+          <div class="card-holder">
+          <button class="s20 discount-ticket">優惠卷</button>
+          <div class="input-holder">
+          <input class="discount-type" type="text" placeholder="選擇折扣卷或輸入折扣碼">
+          <button class="m-discount-btn"><img src="/static/images/cart/tab-icon.png" alt=""></button>
+        </div>
+    </div>
+            <!-- modal discount-->
+            <div class="m-discount-overlay">
+                <div class="m-discount-container">
+                    <button class="s15 back-btn"><img class="back-icon" src="/static/images/cart/ ticket-arrow-back.png" alt="">返回</button>
+            <div class="spd20 ticket-title">可使用折扣卷</div>
+            <div class="flex-wrap">
+    <!-- ticket1 -->
+    
+            <div class="ticket-container select">
+               <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+                <div class="center-section">
+                     
+                    <img src="/static/images/cart/discount-ticket.svg" alt="">
+                    <div class="word-section">
+                        <span class="s16 ticket-name">運費抵用卷 </span>
+                       
+                        <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                    </div>           
+                </div>
+                <img class="discount-check" src="/static/images/cart/discount-ticket-check.png" alt="">
+                <div class="flex"><button class="s12 more-btn">詳細</button></div>
+            </div>
+    <!-- ticket2 -->
+            <div class="ticket-container">
+                <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+                 <div class="center-section">
+                      
+                     <img class="icon-select" src="/static/images/cart/discount-ticket1.png" alt="">
+                     <div class="word-section">
+                         <span class="s16 ticket-name">運費抵用卷</span>
+                         <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                     </div>           
+                 </div>
+                 <div class="flex"><button class="s12 more-btn">詳細</button></div>
+             </div>
+    <!-- ticket3 -->
+            <div class="ticket-container">
+                <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+                <div class="center-section">
+                    <img src="/static/images/cart/discount-ticket1.png" alt="">
+                    <div class="word-section">
+                        <span class="s16 ticket-name">運費抵用卷</span>
+                        <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                    </div>           
+                </div>
+                <div class="flex"><button class="s12 more-btn">詳細</button></div>
+            </div>
+    <!-- ticket4 -->
+            <div class="ticket-container">
+                <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+                <div class="center-section">
+                    
+                    <img class="icon-select" src="/static/images/cart/discount-ticket1.png" alt="">
+                    <div class="word-section">
+                        <span class="s16 ticket-name">運費抵用卷</span>
+                        <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                    </div>           
+                </div>
+                <div class="flex"><button class="s12 more-btn">詳細</button></div>
+            </div>
+    <!-- ticket5 -->
+            <div class="ticket-container">
+                <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+                <div class="center-section">
+                    
+                    <img src="/static/images/cart/discount-ticket1.png" alt="">
+                    <div class="word-section">
+                        <span class="s16 ticket-name">運費抵用卷</span>
+                        <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                    </div>           
+                </div>
+                <div class="flex"><button class="s12 more-btn">詳細</button></div>
+            </div>
+    <!-- ticket6 -->
+            <div class="ticket-container">
+                <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+                <div class="center-section">
+                    
+                    <img class="icon-select" src="/static/images/cart/discount-ticket1.png" alt="">
+                    <div class="word-section">
+                        <span class="s16 ticket-name">運費抵用卷</span>
+                        <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                    </div>           
+                </div>
+                <div class="flex"><button class="s12 more-btn">詳細</button></div>
+            </div>
+        
+            </div>
+            
+    
+            <div class="confirm-section">
+                <button class="s18 m-close-btn">確定</button>
+             </div>       
+        </div>
+            </div>
+        <!-- modal discount-->
+      <!-- modal discount2-->
+      <div class="m-discount-overlay2">
+        <div class="m-discount-container2">
+            <!-- ticket1 -->
+        <div class="ticket-container2">
+            <div class="flex"><button class="s10 discover-btn">去逛逛</button></div>
+             <div class="center-section">
+                  
+                 <img src="/static/images/cart/discount-ticket1.png" alt="">
+                 <div class="word-section">
+                     <span class="s16 ticket-name">運費抵用卷</span>
+                     <span class="s15 ticket-date">有效日期：2020.10.16</span>
+                 </div>           
+             </div>
+             <div class="flex"><button class="s12 more-btn2">詳細</button></div>
+         </div>
+         <p class="s15 ticket-detail">優惠內容：運費抵用卷</p>
+         <p class="s15 ticket-detail">有效期限：2020/07/01 - 2020/10/16 23:22:10</p>
+         <p class="s15 ticket-detail">備註：適用於所有商品，需消費699元，可折抵50元，本卷每一帳號/每人限使用一次</p>
+         
+         <p class="s15 ticket-ps">備註：適用於所有商品，需消費699元，可折抵50元，本卷每一帳號/每人限使用一次</p>
+         <div class="confirm-section2">
+             <button class="s15 m-close-btn2">確定</button>
+          </div>       
+ </div>
+                
+</div>
+    </div>
+<!-- modal discount2 end-->
+    
+    
+    
+    
+    
+        <div class="sp20 grey-color invoice-title">發票開立</div>
+        <section class="about">
+<!-- tab button section -->
+        <div class="btn-container s20">
+            <button class="s20 tab-btn active" data-id="personal">個人電子發票</button>
+            <button class="s20 tab-btn" data-id="company">公司戶電子發票</button>
+            <button class="s20 tab-btn" data-id="giveaway">捐贈發票</button>
+        </div>
+        <div class="about-content">
+            <!-- single content -->
+            <div class="content active" id="personal">
+                
+                <label class="s18 container brown-color">
+                    <input type="checkbox" checked="checked">Kerlineshop會員載具
+                    <span class="s12 low-detail">電子發票若中獎將寄送至購買者地址</span>
+                    <span class="checkmark3"></span>
+                  </label>
+                   
+                  <label class="s18 container brown-color">
+                    <input type="checkbox">手機條碼載具
+                    <span class="s12 low-detail">手機條碼為"/"開頭之條碼，共8碼</span>
+                    <input class="s14 phone-input" type="text" placeholder="請填寫手機條碼">
+                    <span class="checkmark3"></span>
+                  </label>
+        
+                  <label class="s18 container brown-color">
+                    <input type="checkbox">自然人憑證載具
+                    <span class="s12 low-detail">自然人憑證條碼為卡片正面右下方，共16碼英數字</span>
+                    <input class="s14 phone-input" type="text" placeholder="請填寫手機條碼">
+                    <span class="checkmark3"></span>
+                  </label>
+                
+            </div>
+            <!-- single content end -->
+            
+            <!-- single content -->
+            <div class="content" id="company">
+                <label class="s18 container brown-color margin">
+                    <input type="checkbox">統一編號
+                    <input class="s14 phone-input" type="text" placeholder="請填寫統一編號">
+                    <span class="checkmark3"></span>
+                  </label>
+        
+                  <label class="s18 container brown-color margin">
+                    <input type="checkbox">發票抬頭
+                    <input class="s14 phone-input" type="text" placeholder="請填寫發票抬頭">
+                    <span class="checkmark3"></span>
+                  </label>
+                  <span class="s14 content2">發票開立後，請至【訂單查詢】>【發票明細】下載列印電子發票證明聯</span>
+            </div>
+            <!-- single content end -->
+
+            <!-- single content -->
+            <div class="content" id="giveaway">
+                <label class="s18 container brown-color margin">
+                    <input type="checkbox">財團法人罕見疾病基金會
+                    <span class="checkmark3 checkmark2"></span>
+                  </label>
+        
+                  <label class="s18 container brown-color margin">
+                    <input type="checkbox">財團法人心路社會福利基金會
+                    <span class="checkmark3 checkmark2"></span>
+                  </label>
+            </div>
+            <!-- single content end -->
+        </div>
+        </section>
+    </section>
+<!-- information section -->
+    <div class="total-container">
+        <div class="s16 total-quantity mdown">共選擇3件</div>
+                    <div class="total-price">
+                        <span class="s16 price-title pr-40">商品金額</span>
+                        <span class="s16 price">NT$2340</span>
+                    </div>
+                    <div class="total-price">
+                        <span class="s16 price-title pr-40">運費</span>
+                        <span class="s16 price">NT$60</span>
+                    </div>
+                    <div class="total-price">
+                        <span class="s16 price-title pr-40">代收手續費</span>
+                        <span class="s16 price">NT$30</span>
+                    </div>
+            
+                    <div class="total-price">
+                        <span class="s16 price-title pr-40">促銷折抵</span>
+                        <span class="s16 discount">-NT$300</span>
+                        <button class="i12 modal-btn">明細</button>
+                    </div>
+                    <div class="total-price">
+                        <span class="s16 price-title pr-40">折扣券</span>
+                        <span class="s16 discount">-NT$60</span>
+                        <button class="i12 modal-btn2">明細</button>
+                    </div>
+                   
+                    <div class="total-price mtop">
+                        <span class="s16 price-title pr-40">應付金額</span>
+                        <span class="s18 price">NT$2010</span>
+                    </div>
+                    <div class="step-section2 rwd-display">
+                        <button class="s19 prev-btn"><a href="/partial/cart/recipient.html">上一步</a></button>
+                        <button class="s19 next-btn"><a href="/partial/cart/reciept.html">下一步</a></button>              
+                    </div>
+            <!-- modal -->
+                <div class="modal-overlay">
+                    <div class="modal-container">
+                    
+                            <div class="s15 modal-title">促銷折抵</div>
+                        <ul>
+                            <li class="s15 discount-li">滿千送百 -NT$200</li>
+                            <li class="s15 discount-li">首購優惠 -NT$100</li>
+                        </ul>
+                        <div class="block-line"></div>
+                        <div class="i15 discount-total">小計 -NT$300</div>
+                        <button class="s15 close-btn">確定</button>
+                                    
+                    </div>
+                </div>
+             <!-- modal -->
+             <div class="modal-overlay2">
+                <div class="modal-container2">
+                
+                        <div class="s15 modal-title">折扣卷</div>
+                    <ul>
+                        <li class="s15 discount-li">免運抵用卷 -NT$60</li>
+                    </ul>
+                    <div class="block-line"></div>
+                    <div class="i15 discount-total">小計 -NT$60</div>
+                    <button class="s15 close-btn2">確定</button>
+                                
+                </div>
+            </div>
+         <!-- modal -->
+                               
+    </div>
+            <div class="step-section">
+                <button class="s19 prev-btn"><a href="/partial/cart/recipient.html">上一步</a></button>
+                <button class="s19 next-btn"><a href="/partial/cart/reciept.html">下一步</a></button>              
+            </div>
+        
+    
+        <script src="/static/js/cart/tab.js"></script>
+        <script src="/static/js/cart/payment-modal.js"></script>
+     </main>   
+
+</body>
+</body>
+</html>

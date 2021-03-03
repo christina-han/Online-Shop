@@ -1,22 +1,27 @@
-
-$('.owl-carousel').owlCarousel({
-    margin:20,
-    loop:true,
-    autoWidth:true,
-    items:6,
+$('.owl-navbar').owlCarousel({
+    margin:10,
+    loop:false,
+    nav: true,
     dots: false,
+    autoWidth: true,
+    center: false,
+  })
 
-})
-var owl = $('.owl-carousel');
- owl.owlCarousel();
-$('.customNextBtn').click(function() {
-    owl.trigger('next.owl.carousel');
-})
-// Go to the previous item
-$('.customPrevBtn').click(function() {
-    // With optional speed parameter
-    // Parameters has to be in square bracket '[]'
-    owl.trigger('prev.owl.carousel', [200]);
-})
+  const toggleBtn = document.querySelector(".cart-toggle");
+  const togglePBtn = document.querySelector(".p-cart-toggle");
+  const cartCloseBtn = document.querySelector(".cart-close");
+  const cartbar = document.querySelector(".cart-bar");
+  
+  toggleBtn.addEventListener("click", function(){
+   
+      cartbar.classList.toggle("show-cart");
+  })
+  cartCloseBtn.addEventListener("click", function(){
+      cartbar.classList.remove("show-cart");
+  })
+  togglePBtn.addEventListener("click", function(){
+      console.log('hi')
+      cartbar.classList.toggle("show-cart");
+  })
 
 

@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* swiper css */
+
+.swiper-container {
+  max-width: 400px;
+  margin: 0 2rem;
+  height: 38px;
+  text-align: center;
+}
+
+.swiper-slide {
+  display: flex;
+}
+
+.btn {
+  display: inline-block;
+  font-weight: 400;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: middle;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  border: 1px solid transparent;
+  padding: .125rem 3rem;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+.btn-outline-basic {
+  color: var(--primary-color);
+  background-color: transparent;
+  border: 4px solid;
+}
+@media screen and (min-width: 1200px) {
+  .height-adjust{
+    display: block;
+    margin-top: 2.5%;
+    
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1416px) {
+  .height-adjust{
+    display: block;
+    margin-top: 2.5%;
+  }
+}
+@media screen and (min-width: 1590px) {
+  .height-adjust{
+    display: block;
+    margin-top: 5.5%;
+  }
+}
+@media screen and (min-width: 1600px) {
+  .height-adjust{
+    display: block;
+    margin-top: 2.5%;
+  }
+}
+@media screen and (min-width: 1692px) {
+  .height-adjust{
+    display: block;
+    margin-top: 2.5%;
+  }
+}
+@media screen and (min-width: 1705px) {
+  .height-adjust{
+    display: block;
+    margin-top: 3%;
+  }
+}
+@media screen and (min-width: 1920px) {
+  .height-adjust{
+    display: block;
+    margin-top: 3%;
+  }
+}
+    </style>
+</head>
+<body>
+     <div class="product-category items-center dp-flex">
+                        <button class="tab-arrow text-white customPrevBtn" id="tab-prev">&lt;</button>
+                        <div class="swiper-container">
+                            <div class="height-adjust">
+                             <div class="owl-carousel owl-theme">
+                                <div class="swiper-slide justify-center items-center">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">男哈hhhahahahaahhhh</a>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide justify-center items-center" style="min-width:100px">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">女裝</a>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide justify-center items-center" style="min-width:100px">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">兒童 xcvcxcv</a>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide justify-center items-center" style="min-width:100px">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">Man's</a>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide justify-center items-center" style="min-width:100px">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">Female's</a>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide justify-center items-center" style="min-width:100px">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">tt_03</a>
+                                    </span>
+                                </div>
+                                <div class="swiper-slide justify-center items-center" style="min-width:100px">
+                                    <span class="product-tab">
+                                        <a class="a-header" href="#">tt_04</a>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                        <button class="tab-arrow text-white customNextBtn" id="tab-next">&gt;</button>
+                    </div>
+                    <script>
+                        $('.owl-carousel').owlCarousel({
+    margin:20,
+    loop:true,
+    autoWidth:true,
+    items:6,
+    dots: false,
+
+})
+var owl = $('.owl-carousel');
+ owl.owlCarousel();
+$('.customNextBtn').click(function() {
+    owl.trigger('next.owl.carousel');
+})
+// Go to the previous item
+$('.customPrevBtn').click(function() {
+    // With optional speed parameter
+    // Parameters has to be in square bracket '[]'
+    owl.trigger('prev.owl.carousel', [200]);
+})
+
+
+
+                    </script>
+    
+</body>
+</html>

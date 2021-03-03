@@ -1,0 +1,1053 @@
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+a{
+  color: #ffffff;
+  border-bottom: unset;
+  text-decoration: none;
+}
+
+
+img {
+    vertical-align: middle;
+  }
+  
+  button, .clickable {
+    display: block;
+    all: unset;
+    cursor: pointer;
+  }
+  
+  button:focus, label:focus {
+    outline:0;
+  }
+  
+  .btn:not(:disabled):not(.disabled) {
+    cursor: pointer;
+  }
+
+input[type="text"]:focus{
+    outline: none;
+    box-shadow: none;
+    border:none;
+} 
+input[type="text"]:focus:hover{
+    outline: none;
+    box-shadow: none;
+    border: none;
+    border-radius:0;
+}
+input{
+  outline: 0;
+  border: 0;
+  background: 0;
+}
+
+select {
+   
+    /* appearance: none; */
+    border-radius: unset;
+    background-color: transparent;
+    border: 1px solid #707070;
+    margin: 0;
+    cursor: pointer;
+    line-height: inherit;
+  }
+:root {
+    --select-border: #777;
+    --select-focus: blue;
+    --select-arrow: var(--select-border);
+  }
+
+
+
+
+.brown-color{
+    color: #8C8079;
+}
+.grey-color{
+    color: #707070;
+}
+.rwd-display{
+  display: none;
+}
+/* bread crumb */
+.bread-container{
+  margin: 186px 26% 70px 26%;
+  display: flex;
+  justify-content: space-between;
+}
+.step{
+    text-align: center;
+    justify-content: center; 
+    width: 13%;
+}
+.bread-icon{
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    position: relative;
+    display: inline-block;
+    position: relative;
+}
+.icon-checked{
+    background-color: #DDBB5E;
+    border: 1px solid #707070;
+}
+.icon-unchecked{
+    background-color: #ffffff;
+    border: 1px solid #707070;
+}
+.bread-img{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    color:#DDBB5E;   
+}
+.bread-title{
+    margin-top: 1rem;
+    color: #707070;
+}
+.progress-bar{
+    background-color: #DDBB5E;
+    width: 10%;
+    height: 3px;
+    margin-top: 2.5%;
+}
+.no-progress{
+    background-color: transparent;
+}
+
+/* payment section */
+.order-container {
+  margin: 90px auto;
+  width: 55%;
+  border: 1px solid #707070;
+  padding: 3rem 6% 2rem 6%; 
+}
+.container {
+    display: block;
+    position: relative;
+    padding-left: 8%;
+    margin: 2rem 0 0.5rem 0;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .container input[type="checkbox"] {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+  }
+  
+  .checkmark {
+    position: absolute;
+    top: 14%;
+    left: 0;
+    height: 21px;
+    width: 21px;
+    background-color: #ffffff;
+    border: 1px solid #707070;
+    border-radius: 50%;
+  }
+  
+  .container:hover input[type="checkbox"] ~ .checkmark {
+    background-color: #ccc;
+  }
+  
+  .container input[type="checkbox"]:checked ~ .checkmark {
+    background-color: #DDBB5E;
+  }
+  
+  .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+  
+  .container input[type="checkbox"]:checked ~ .checkmark:after {
+    display: block;
+  }
+  
+  .low-detail{
+    color: #C1BFBF;
+      padding-left: 2%;
+  }
+  .credit-card{
+    margin-top: -1.2%;
+  }
+  .discount-title{
+      margin-top: 5rem;
+  }
+  .invoice-title{
+    margin-top: 5rem;
+  }
+
+  .discount-ticket{
+    background-color: #DDBB5E;
+    color: #ffffff;
+    border: 1px solid #707070;
+    padding: 0.5rem 2rem;
+  }
+  .card-holder{
+    display: flex;
+    margin: 2rem 0;
+  }
+  .input-holder{
+      border: 1px solid #707070;
+      width: 45%;
+      margin-left: 2%;
+  }
+  .discount-type{
+      border: transparent;
+      padding: 0.8rem;
+      width: 90%;
+      border-bottom: 1px solid transparent;
+  }
+  /* -----modal discount----- */
+.m-discount-btn {
+  /* color: #7CD1F9;
+    border: 1px solid #7CD1F9;
+    margin: 23px 0 0 5px;
+    padding: 1px 8px; */
+}
+/* .modal-btn:hover {
+  background: transparent;
+  color: var(--clr-primary-5);
+} */
+.m-discount-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: hsla(0, 0%, 86%, 0.753);
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -8;
+}
+/* OPEN/CLOSE MODAL */
+.m-open-modal {
+  visibility: visible;
+  z-index: 8;
+}
+.m-discount-container {
+  width: 41%;
+  border: 1px solid #707070;
+  padding: 1rem 0 0 0 ;
+  background-color: #ffffff;
+}
+
+/* .close-btn:hover {
+  color: var(--clr-red-light);
+  transform: scale(1.3);
+} */
+.m-close-btn{
+  background-color: #000000;
+  border-radius: 3px;
+  padding: 0.5rem 5rem;
+  color: #ffffff;
+}
+
+
+/* discount modal box  */
+
+.flex-wrap{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.back-btn{
+  color: #7CD1F9;
+  width: 96%;
+  padding-left: 88%;
+}
+.back-icon{
+  padding-right: 2%;
+}
+.flex{
+  display: flex;
+  justify-content: flex-end;
+}
+.word-section{
+  margin-left: 6%;
+  
+}
+.ticket-container{
+  width: 43%;
+  border: 0.75px solid #C1BFBF;
+  box-shadow: 0px 0px 6px rgb(175, 175, 175);
+  margin: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.7rem;
+  position: relative;
+}
+.ticket-container:hover {
+  border: 0.75px solid #274455;
+  cursor: pointer;
+}
+.ticket-container.select{
+  border: 0.75px solid #274455;
+}
+.discover-btn{
+  display: block;
+  color: #ffffff;
+  background-color: #C30D23;
+  padding: 0.2rem 0.6rem;
+  border-radius: 1.2px;
+}
+.ticket-title{
+  color: #274455;
+  padding-left: 4%;
+}
+.center-section{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+.ticket-name{
+  font-weight: 600;
+  display: block;
+  color: #231815;
+}
+.ticket-date{
+  color: #BCBCBC;
+  font-weight: 500;
+}
+.discount-check{
+  position: absolute;
+  top: 17%;
+  left: 57%;
+}
+.more-btn{
+  display: block;
+  width: 100%;
+  text-align: end;
+  color: #DDBB5E;
+  font-size: 500;
+}
+
+
+.confirm-section{
+  width: 100%;
+  background-color: #F9F9F9;
+  text-align: center;
+  padding: 4rem 0 4rem 0;
+  border-top: 0.75px solid #000000 ;
+  margin-top: 2rem;
+}
+.m-close-btn{
+  background-color: #000000;
+  border-radius: 3px;
+  padding: 0.5rem 5rem;
+  color: #ffffff;
+}
+/* -----modal discoount end----- */
+/* ------------------modal discount2---------------- */
+
+  /* .modal-btn:hover {
+    background: transparent;
+    color: var(--clr-primary-5);
+  } */
+  .m-discount-overlay2 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: hsla(0, 0%, 100%, 0.438);
+    display: grid;
+    place-items: center;
+    transition: var(--transition);
+    visibility: hidden;
+    z-index: -15;
+  }
+  /* OPEN/CLOSE MODAL */
+  .m-open-modal2 {
+    visibility: visible;
+    z-index: 15;
+  }
+  .m-discount-container2{
+    width: 26%;
+    border: 1px solid #707070;
+    padding: 1.2rem 1.2rem 1.2rem 1.2rem;
+    background-color: #ffffff;
+}
+  
+  /* .close-btn:hover {
+    color: var(--clr-red-light);
+    transform: scale(1.3);
+  } */
+  .m-close-btn2{
+    background-color: #274455;
+    border-radius: 2px;
+    padding: 0.2rem 2.5rem;
+    color: #ffffff;
+}
+  
+  /* discount modal box  */
+
+.ticket-container2{
+    width: 58%;
+    border: 0.75px solid #C1BFBF;
+    box-shadow: 0px 0px 6px rgb(175, 175, 175);
+    padding: 0.5rem 0.5rem 0.5rem 1rem;
+    margin-bottom: 2rem;
+}
+
+.confirm-section2{
+    width: 100%;
+    text-align: center;
+}
+
+.ticket-detail{
+    color:#8C8079;
+}
+.ticket-ps{
+    color: #274455;
+    font-weight: 500;
+    margin-top: 6rem;
+}
+.more-btn2{
+  color: #DDBB5E;
+}
+  
+  
+
+/* ---------------modal discount2 end--------------- */
+  /* information section */
+
+ .total-container{
+     width: 55%;
+     background-color: #F9F9F9;
+     margin: 2rem auto;
+     padding: 2rem 2rem;
+     
+
+ }
+.total-quantity{
+    color: #707070;
+}
+.total-price{
+    display: flex;
+}
+.price-title{
+    color: #707070;
+    margin: 10px 0;
+    width: 28%;
+}
+.discount{
+    color: #FF6060;
+    margin: 10px 0;
+}
+.price{
+    margin: 10px 0;
+    color: #707070;
+}
+.ps{
+    color:#8C8079;
+    margin: 23px 0 0 2px;
+}
+.button-container{
+    display: flex;
+    justify-content: flex-end;
+    padding: 20px 5% 20px 8%;
+}
+.mdown{
+    margin-bottom: 1%;
+}
+.mtop{
+    margin-top: 3%;
+}
+
+.step-section{
+    margin:4rem auto 10rem auto;
+    text-align: center;
+}
+.prev-btn{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.4% 3%;
+    border-radius: 4px;
+    margin: 0 1%;
+}
+.next-btn{
+    background-color: #000000;
+    color: #ffffff;
+    padding: 0.4% 3%;
+    border-radius: 4px;
+    margin: 0 1%;
+}
+
+
+/* -----modal----- */
+.modal-btn {
+  color: #7CD1F9;
+    border: 1px solid #7CD1F9;
+    margin: 23px 0 0 5px;
+    padding: 1px 8px;
+}
+/* .modal-btn:hover {
+  background: transparent;
+  color: var(--clr-primary-5);
+} */
+.modal-overlay {
+  position: fixed;
+  top: 20px;
+  left: 90px;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(73, 166, 233, 0.5); */
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -5;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal {
+  visibility: visible;
+  z-index: 5;
+}
+.modal-container {
+    background-color: #ffffff;
+    width: 15%;
+    border: 1px solid  #707070;
+    box-shadow: 5px 3px 8px rgb(175, 175, 175);
+    padding: 1rem 1rem;
+}
+.close-btn {
+    background-color: #274455;
+    border-radius: 2px;
+    padding: 0.3rem 2.2rem;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+/* .close-btn:hover {
+  color: var(--clr-red-light);
+  transform: scale(1.3);
+} */
+
+
+/* discount modal box  */
+
+.modal-title{
+    color: #707070;
+}
+.discount-li{
+    color: #274455;
+    margin: 1.5rem 0 ;
+}
+.block-line{
+    width: 99%;
+    height: 1px;
+    background-color: #707070;
+}
+.discount-total{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.8rem 0 2.2rem 0;
+}
+/* -----modal end----- */
+
+
+/* -----modal2----- */
+.modal-btn2 {
+  color: #7CD1F9;
+    border: 1px solid #7CD1F9;
+    margin: 23px 0 0 5px;
+    padding: 1px 8px;
+}
+/* .modal-btn:hover {
+  background: transparent;
+  color: var(--clr-primary-5);
+} */
+.modal-overlay2 {
+  position: fixed;
+  top: 20px;
+  left: 90px;
+  width: 100%;
+  height: 100%;
+  /* background: rgba(73, 166, 233, 0.5); */
+  display: grid;
+  place-items: center;
+  transition: var(--transition);
+  visibility: hidden;
+  z-index: -4;
+}
+/* OPEN/CLOSE MODAL */
+.open-modal2 {
+  visibility: visible;
+  z-index: 4;
+}
+.modal-container2 {
+    background-color: #ffffff;
+    width: 15%;
+    border: 1px solid  #707070;
+    box-shadow: 5px 3px 8px rgb(175, 175, 175);
+    padding: 1rem 1rem;
+}
+.close-btn2 {
+    background-color: #274455;
+    border-radius: 2px;
+    padding: 0.3rem 2.2rem;
+    color: #ffffff;
+    text-align: center;
+    display: block;
+    margin: 0 auto;
+}
+/* .close-btn:hover {
+  color: var(--clr-red-light);
+  transform: scale(1.3);
+} */
+
+
+/* discount modal box  */
+
+.modal-title{
+    color: #707070;
+}
+.discount-li{
+    color: #274455;
+    margin: 1.5rem 0 ;
+}
+.block-line{
+    width: 99%;
+    height: 1px;
+    background-color: #707070;
+}
+.discount-total{
+    display: flex;
+    justify-content: flex-end;
+    margin: 0.8rem 0 2.2rem 0;
+}
+/* -----modal2 end----- */
+
+
+  /* -------tab section--------- */
+  .about {
+    background: #E8E8E8;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    margin: 2rem 0;
+  }
+  .btn-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    text-align: center;
+    background-color: #E8E8E8;
+  
+  }
+  /* .tab-btn:nth-child(1) {
+    border-top-left-radius: var(--radius);
+  }
+  .tab-btn:nth-child(3) {
+    border-top-right-radius: var(--radius);
+  } */
+  .tab-btn {
+    padding: 0.5rem 0;
+    border: 1px solid #E8E8E8;
+    text-transform: capitalize;
+    display: block;
+    color: #707070;
+    cursor: pointer;
+  }
+  /* .tab-btn:hover:not(.active) {
+    background: var(--clr-primary-10);
+    color: var(--clr-primary-5);
+  } */
+  .about-content {
+    /* border-bottom-left-radius: var(--radius);
+    border-bottom-right-radius: var(--radius); */
+    padding: 0.8rem 0.8rem;
+  }
+  /* hide content */
+  .content {
+    display: none;
+    border: 1px solid transparent;
+    padding: 0.6rem 1.5rem;
+  }
+  .tab-btn.active {
+    background-color: #ffffff ;
+    border: 1px solid #707070;
+  }
+  .content.active {
+    display: block;
+    border: 1px solid #707070;
+    background-color: #ffffff ;
+  }
+  
+  /* article section*/
+  .brown-color{
+    color: #8C8079;
+  }
+  
+  .container {
+      display: block;
+      position: relative;
+      padding-left: 8%;
+      margin: 2rem 0 0.5rem 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+    }
+    .container input[type="checkbox"] {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+      height: 0;
+      width: 0;
+    }
+    
+    .checkmark3 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 19px;
+      width: 19px;
+      background-color: #ffffff;
+      border: 1px solid #707070;
+      border-radius: 50%;
+    }
+    
+    .container:hover input[type="checkbox"] ~ .checkmark3 {
+      background-color: #ccc;
+    }
+    
+    .container input[type="checkbox"]:checked ~ .checkmark3 {
+      background-color: #DDBB5E;
+    }
+    
+    .checkmark3:after {
+      content: "";
+      position: absolute;
+      display: none;
+    }
+    
+    .container input[type="checkbox"]:checked ~ .checkmark2:after {
+      display: block;
+    }
+   
+    
+    input[type="text"]:focus{
+      outline: none;
+      box-shadow: none;
+      border:none;
+      border-bottom: 1px solid #707070;
+  }
+  input[type="text"]:focus:hover{
+      outline: none;
+      box-shadow: none;
+      border:none;
+      border-radius:0;
+      border-bottom: 1px solid #707070;
+  }
+  .phone-input{
+      border: unset;
+      border-bottom: 1px solid #707070;
+      width: 50%;
+      padding: 0.4rem 0;
+      margin: 0.1rem 0;
+      display: block;
+      color: #C1BFBF;
+  }
+  .low-detail{
+    color: #C1BFBF;
+    display: block;
+    margin: 0.4rem 0 0 4rem;
+    padding: 0;
+  }
+  /* article section2 */
+  .content2{
+      color: #024564;
+      padding-left: 10%;
+      margin: 1rem 0 2rem 0;
+      display: block;
+  }
+  
+  .margin{
+      margin: 2.5rem 0;
+  }
+  .checkmark2{
+      top: 0;
+  }
+
+  @media screen and (max-width: 1700px) {
+    .m-discount-container{
+      width: 51%;
+    }
+    .m-discount-container2{
+      width: 40%;
+    }
+    .modal-container {
+      width: 20%;
+    }
+    .modal-container2 {
+      width: 20%;
+    }
+  }
+  /* ipad */
+@media screen and (min-width: 768px) and (max-width:1024px){
+  .bread-container {
+    margin: 100px 10% 70px 10%;
+  }
+  .order-container {
+    margin: 0 auto;
+    width: 80%;
+  }
+}
+
+
+  /* 手機版 */
+
+@media screen and (max-width: 576px) {
+  .rwd-display{
+      display: unset;
+  }
+  /* bread crumb */
+
+  .bread-container{
+      margin: 25px 0;
+      width: 375px;
+      justify-content: space-around;
+      position: relative;
+  } 
+  
+  .bread-icon {
+      width: 35px;
+      height: 35px;
+  }
+  .bread-img{
+      width: 6vw;
+  }
+  .step{
+      width: unset;
+      position: relative;
+
+  }
+  .progress-bar{
+      height: 1px;
+  }
+ .pb1{
+     position: absolute;
+     top: 7px;
+     left: 65px;
+     width: 8%;
+ }
+ .pb2{
+     position: absolute;
+     top: 7px;
+     left: 150px;
+      width: 8%;
+ }
+ .pb3{
+     position: absolute;
+     top: 7px;
+     left: 226px;
+     width: 7%;
+ }
+ .pb4{
+     position: absolute;
+     top: 7px;
+     left: 293px;
+     width: 7%;
+ }
+  .p-step{
+      width: 15.5%;
+      padding: 0 2px 0 0;
+
+  }
+
+/* order container */
+
+  .order-container{
+        width: 359px;
+        margin: 3rem auto 15rem auto;
+        border: 0.5px solid #707070;
+        padding: 1rem 10px;
+  }
+  .p-title{
+   text-align: center;
+  }
+  .checkmark {
+    top: 8%;
+    height: 14px;
+    width: 14px;
+  }
+  .low-detail {
+    margin: 10px 0 0 0;
+}
+  
+  .discount-title {
+    margin-top: 3rem;
+}
+  .discount-type {
+    padding: 0;
+  }
+  input{
+    font-size: 50%;
+  }
+  
+  .input-holder {
+    width: 65%;
+    line-height: 30px;
+    text-align: center;
+    padding: 0 5px;
+  }
+  .discount-ticket {
+    padding: 0 20px;
+  }
+
+  /* 發票開立 */
+  .invoice-title{
+    text-align: center;
+    margin: 3rem 0 0 0;
+  }
+  .checkmark3 {
+    top: 4px;
+    height: 9px;
+    width: 9px;
+
+  }
+  .margin {
+    margin: 2.5rem 0;
+}
+/* information section */
+.total-container {
+  width: 100%;
+  background-color: #FFFFFF;
+  margin:0 auto;
+  padding: 15px 15px;
+  border: 0.75px solid #707070;
+  position: fixed;
+  bottom: 0;
+}
+
+.price-title {
+  color: #707070;
+
+}
+.price {
+  margin: 1px 0;
+  
+}
+.price-title{
+  margin: 3px 0;
+}
+.discount{
+  margin: 3px 0;
+}
+.modal-btn{
+  margin: 10px 0 0 8px;
+  padding: 1px 3px;
+}
+.modal-btn2{
+  margin: 10px 0 0 8px;
+  padding: 1px 3px;
+}
+.total-quantity {
+  text-align: end;
+}
+.display-none{
+  display: none;
+}
+.step-section{
+  display: none;
+}
+.step-section2{
+  text-align: end;
+  display: flex;
+  justify-content: flex-end;
+}
+.prev-btn{
+  border-radius: 1px;
+  padding: 3px 1.5rem;
+  margin: 10px 0 0 0;
+}
+.next-btn{
+  border-radius: 1px;
+  padding: 3px 1.5rem;
+  margin: 10px 0 0 10px;
+}
+/* information-modal */
+.modal-overlay {
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.712); 
+}
+.modal-container {
+  width: 70%;
+}
+.modal-overlay2 {
+  top: 0;
+  left: 0;
+  background: rgba(255, 255, 255, 0.712); 
+}
+.modal-container2 {
+  width: 70%;
+}
+
+/* ticket-modal */
+.m-discount-container {
+  width: 96%;
+}
+.ticket-container {
+  width: 85%;
+  margin: 1rem 0;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+}
+.back-btn {
+  color: #7CD1F9;
+  width: 96%;
+  margin: 0 auto;
+  text-align: end;
+  padding: 0;
+}
+.ticket-title {
+  color: #274455;
+  text-align: center;
+  width: 90%;
+}
+.word-section {
+  margin-left: 2%;
+}
+.discover-btn {
+  padding: 0.2rem 0.5rem;
+}
+.discount-check {
+  position: absolute;
+  top: 31%;
+  left: 68%;
+}
+.m-discount-overlay2{
+  background: hsla(0, 0%, 100%, 0.781);
+}
+.m-discount-container2 {
+  width: 85%;
+}
+.ticket-container2 {
+  width: 100%;
+  padding: 0.2rem 0.5rem 0.2em 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.m-close-btn2 {
+  padding: 0.3rem 2.5rem;
+  margin-top: 1rem;
+}
+    
+  }

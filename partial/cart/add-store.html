@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/static/css/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/cart/add-store.css">
+    <link rel="stylesheet" href="/static/css/font.css">
+    <title>Document</title>
+</head>
+<body>
+    <!-- bread crumb -->
+    <div class="bread-container">
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/confirm-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">確認購買清單</div>
+        </div>
+        <div class="progress-bar pb1"></div>
+
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/recipient-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">填寫收件人資訊</div>
+        </div>
+        <div class="progress-bar no-progress pb2"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/payment-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">付款方式</div>
+        </div>
+        <div class="progress-bar no-progress pb3"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/receipt.icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">訂單資訊</div>
+        </div>
+        <div class="progress-bar no-progress pb4"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/order-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title ">完成訂單</div>
+        </div>
+    </div>
+
+<!-- add store section -->
+    <section class="order-container">
+        
+        <div class="s22 location-title brown-color">
+            <button class="block" onclick="loadDoc(docNames[0]);"><a href="/partial/cart/recipient.html">
+                <img src="/static/images/cart/up-page-icon.png" alt=""></a></button>
+            <div class="add-title">新增7-11門市</div>
+        </div>
+
+        <div class="store-box">
+            <div class="s20 title brown-color">收件者姓名</div>
+            <input class="store-input" type="text">
+        </div>
+        <div class="store-box">
+            <div class="s20 title brown-color">手機號碼</div>
+            <select class="phone-input" name="" id="">
+                <option value="1">+886</option>
+            </select>
+            <input class="store-input" type="text">
+        </div>
+        <div class="store-box">
+            <div class="s20 title brown-color">超商門市</div>
+            <input class="store-input" type="text">
+        </div>
+
+        <button class="sa22 choose-btn">選擇門市</button>
+        <div class="s15 detail">請務必堤供與身分證件相符的真實姓名以便門市人員查驗，方便取貨。</div>
+        <button class="sa22 confirm-btn"><a href="/partial/cart/add-store.html">確定</a></button>
+        
+
+
+    </section>  
+</body>
+</html>

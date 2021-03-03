@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" href="/static/css/vendors/normalize.min.css">
+    <link rel="stylesheet" href="/static/css/cart/recipient.css">
+    <link rel="stylesheet" href="/static/css/font.css">
+    <title>recipient</title>
+</head>
+<body>
+    <div class="bread-container">
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/confirm-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">確認購買清單</div>
+        </div>
+        <div class="progress-bar pb1"></div>
+
+        <div class="step">
+            <div class="bread-icon icon-checked">
+                <img class="bread-img" src="/static/images/cart/recipient-icon1.png" alt="">
+            </div> 
+            <div class="s14 bread-title">填寫收件人資訊</div>
+        </div>
+        <div class="progress-bar no-progress pb2"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/payment-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">付款方式</div>
+        </div>
+        <div class="progress-bar no-progress pb3"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/receipt.icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title">訂單資訊</div>
+        </div>
+        <div class="progress-bar no-progress pb4"></div>
+
+        <div class="step p-step">
+            <div class="bread-icon icon-unchecked">
+                <img class="bread-img" src="/static/images/cart/order-icon.png" alt="">
+            </div> 
+            <div class="s14 bread-title ">完成訂單</div>
+        </div>
+    </div>
+   
+   <!-- order detail -->
+   <section class="order-container">
+       <div class="s22 location-title brown-color">運送方式</div>
+  <!-- 7-11       -->
+    <div class="ac">  
+      <input class="ac-input" id="ac-1" name="ac-1" type="checkbox" />
+      <label class="s18 ac-label" for="ac-1">
+          <div class="s-container">
+              <div class="s18 store-name brown-color">7-11  取貨</div>
+              <div class="s18 store-price">NT$60</div>
+              <button class="s16 add-store">
+                  <a href="/partial/cart/add-store.html">新增門市</a>
+                </button>
+
+          </div>
+        </label>          
+      <div class="ac-text">           
+            <div class="ac-sub">
+                <div class="store-container">
+                    <input type="checkbox" id="c1" name="cc" />
+                    <label class="label-flex"for="c1"><span></span>
+
+                    <div class="store-section">
+                        <p class="s18 store-title ">三重門市</p>
+                        <p class="s15">李財金 (+886) 986123112</p>
+                        <p class="s15">新北市三重區三重街168號</p>
+                    </div></label>
+                        <button class="s16 delete-store">刪除</button>
+                </div>
+            </div>            
+      </div>          
+    </div>
+    <!-- 全家 -->
+    <div class="ac">  
+      <input class="ac-input" id="ac-2" name="ac-2" type="checkbox" />
+      <label class="s18 ac-label" for="ac-2">
+          <div class="s-container">
+              <div class="s18 store-name brown-color">全家  取貨</div>
+              <div class="s18 store-price">NT$60</div>
+              <button class="s16 add-store">
+                  <a href="/partial/cart/add-store.html">新增門市</a>
+                </button>
+
+          </div>
+        </label>          
+      <div class="ac-text">           
+            <div class="ac-sub">
+                <div class="store-container">
+                    <input type="checkbox" id="c2" name="cc" />
+                    <label class="label-flex"for="c2"><span></span>
+
+                    <div class="store-section">
+                        <p class="s18 store-title ">三重門市</p>
+                        <p class="s15">李財金 (+886) 986123112</p>
+                        <p class="s15">新北市三重區三重街168號</p>
+                    </div></label>
+                        <button class="s16 delete-store">刪除</button>
+                </div>
+            </div>            
+      </div>          
+    </div>
+    <!-- 萊爾富 -->
+    <div class="ac">  
+      <input class="ac-input" id="ac-3" name="ac-3" type="checkbox" />
+      <label class="s18 ac-label" for="ac-3">
+          <div class="s-container">
+              <div class="s18 store-name brown-color">萊爾富  取貨</div>
+              <div class="s18 store-price">NT$60</div>
+              <button class="s16 add-store">
+                <a href="/partial/cart/add-store.html">新增門市</a>
+            </button>
+              
+
+          </div>
+        </label>          
+      <div class="ac-text">           
+            <div class="ac-sub">
+                <div class="store-container">
+                    <input type="checkbox" id="c3" name="cc" />
+                    <label class="label-flex"for="c3"><span></span>
+
+                    <div class="store-section">
+                        <p class="s18 store-title ">三重門市</p>
+                        <p class="s15">李財金 (+886) 986123112</p>
+                        <p class="s15">新北市三重區三重街168號</p>
+                    </div></label>
+                        <button class="s16 delete-store">刪除</button>
+                </div>
+            </div>            
+      </div>          
+    </div>
+    <!-- 宅配 -->
+    <div class="ac">  
+      <input class="ac-input" id="ac-4" name="ac-4" type="checkbox" />
+      <label class="s18 ac-label" for="ac-4">
+          <div class="s-container">
+              <div class="s18 store-name brown-color">宅配</div>
+              <div class="s18 store-price">NT$60</div>
+              <button class="s16 add-store">
+                  <a href="/partial/cart/add-store.html">新增門市</a>
+                </button>
+
+          </div>
+        </label>          
+      <div class="ac-text">           
+            <div class="ac-sub">
+                <div class="home-container">
+                    <!-- <img class="checked-icon" src="/static/images/cart/cart/store-checked.png" alt=""> -->
+                    <div class="home-section">
+                        <input class="s18 input1" type="text" placeholder="收件者姓名" >
+                       <div class="phone-number">
+                                <select name="" id="">
+                                    <option value="1">+886</option>
+                                </select>
+                                <input class="s18 input2" type="text" placeholder="電話號碼" >
+                        </div>
+                       <div class="address sr20 ">
+                                <span class="brown-color">縣市</span>
+                                <select class="address-select" name="" id="">
+                                    <option value="1">新北市</option>
+                                </select>
+                            <span class="brown-color">鄉鎮市區</span>
+                                <select class="address-select" name="" id="">
+                                    <option value="1">三重區</option>
+                                </select>
+                            <span class="brown-color">郵遞區號</span>
+                                <select class="address-select" name="" id="">
+                                    <option value="1">265</option>
+                                </select>
+                        </div>
+                        <input class="s18 input1" type="text" placeholder="街道地址" >
+                    </div>
+                        <!-- <button class="s16 delete-store">刪除</button> -->
+                </div>
+            </div>            
+      </div>          
+    </div>
+    <div class="s18 ps">備註
+        <input class="ps-input" type="text">
+    </div>
+
+    <div class="step-section">
+        <button class="s19 prev-btn"><a href="/partial/cart/confirm.html">上一步</a></button>
+        <button class="s19 next-btn">
+            <a href="/partial/cart/payment.html">下一步</a>
+        </button>
+       
+        
+    </div>
+
+            
+  </section>
+
+
+
+   
+    
+</body>
+</html>
