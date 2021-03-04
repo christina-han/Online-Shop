@@ -1,6 +1,4 @@
-a{
-    all: unset;
-}
+
 /* 手機版 */
 @media screen and (max-width: 576px){
     .current-product {

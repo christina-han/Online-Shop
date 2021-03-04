@@ -1,3 +1,8 @@
+
+a :hover{
+ text-decoration: none;
+}
+
 /* nav-swiper */
 
 .bs-image{
@@ -347,7 +352,7 @@
 /* add cart section */
 .cart-bar{
   position: fixed;
-  top: -3%;
+  top: -5%;
   right: 0;
   width: 300px;
   height: 100%;
@@ -375,7 +380,7 @@
   background-color: #000000;
   display: flex;
   justify-content: space-between;
-  padding: 1.5rem;
+  padding: 1.2rem;
 }
 .title{
   color: #ffffff;
@@ -386,9 +391,9 @@
   background: #ffffff;
 }
 .cart-scroll{
-  /* height: 90%; */
+
   overflow: scroll;
-  /* padding-bottom: 1rem; */
+
 }
 .product-section{
   display: flex;
@@ -459,16 +464,19 @@ height: 0.8vw;
 }
 .total-price{
   border: 1px solid #DDBB5E;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   text-align: center;
   background: #ffffff;
 }
 .cart-check{
   background-color: #000000;
   color: #ffffff;
-  padding: 1.5rem 0;
+  padding: 1.2rem 0;
   text-align: center;
   display: block;
+}
+.cart-check:hover{
+  cursor: pointer;
 }
 
 /* add cart section end */
@@ -535,15 +543,17 @@ height: 0.8vw;
 .show-cart{
     transform: translateY(0);
 }
-/* .product-contianer{
-  border: unset;
-  max-height: 70vh;
-  overflow: scroll;
-} */
+.cart-header{
+  padding: 1.2rem;
+}
 .cart-scroll{
   height: 90%;
   overflow: scroll;
   padding-bottom: 1rem;
+}
+.product-contianer{
+  padding: 1rem 0 8rem 0;
+  border: unset;
 }
 .product-section{
   justify-content: center;
@@ -568,9 +578,6 @@ height: 0.8vw;
 .r-price-p{
   display: block;
 }
-/* .price-p{
-  display: none;
-} */
 .order-select {
   width: 66%;
 }
@@ -583,48 +590,30 @@ height: 0.8vw;
     text-align: end;
     margin: 1rem 0 0 0;
 }
+.cart-check-section{
+  position: fixed;
+  bottom: 5%;
+  width: 100%;
+}
 .total-price{
     border: 1px solid #DDBB5E;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     text-align: center;
 }
 .cart-check{
     background-color: #000000;
     color: #ffffff;
-    padding: 1.5rem 0;
+    padding: 1.2rem 0;
     text-align: center;
     display: block;
+    width: 100%;
+  
+  
     
 }
 /* add cart section end */
 } 
-/* @media screen and (max-width:414px){
-  .cart-bar{
-    top: -12%;
-  }
-  .product-contianer{
-    max-height: 66vh;
-  }
 
-}
-@media screen and (max-width:390px){
-  .cart-bar{
-    top: -11%;
-}
-  .product-contianer{
-    max-height: 72vh;
-  }
-
-}
-@media screen and (max-width:375px){
-  .cart-bar{
-    top: -11%;
-}
-  .product-contianer{
-    max-height: 71vh;
-  }
-
-} */
  /* mobile 橫版 */
  @media (min-width: 661px) and (max-width: 880px) and (orientation: landscape){
   .phone-display{
